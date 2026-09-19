@@ -18,10 +18,10 @@ reach (question 2).
 
 ## 2. Your scoreboard is a cycle-exact model of your own design. Isn't that writing the design twice and checking it against itself?
 
-It is writing the *spec* three times, by design. `bench/model.py` was written from
-`docs/SPEC.md` by someone who never saw the RTL, and the RTL by someone who never saw the
-model (`notes/INTEGRATION.md`). They agreed on every output of every cycle at first
-contact, and both authors independently flagged the same four ambiguous sentences.
+It is writing the *spec* three times, by design. `bench/model.py` and the RTL were
+written in separate passes, each from `docs/SPEC.md` alone and before the other was
+opened (`notes/INTEGRATION.md`). They agreed on every output of every cycle at first
+contact, and the notes from the two passes flag the same four ambiguous sentences.
 
 The reason for a cycle-exact model rather than per-test checks is experimental control.
 I wanted to compare *stimulus* techniques. If directed tests had hand-written checks and
@@ -40,9 +40,9 @@ reported as no measurable difference. But they did not kill the same mutants: pe
 to 17 are directed-only and 5 to 9 random-only, and together the simulation arms reach
 99.3%.
 
-What each misses is characteristic. The directed suite misses what its author's habits
-hide: it only ever sends frames at divisors 0 to 7, 15 and 137, so twelve baud-counter
-mutants survive; it always writes `IRQ_EN` just before relying on it, so a mutant where
+What each misses is characteristic. The directed suite misses what the habits of whoever
+writes it hide: it only ever sends frames at divisors 0, 1, 2, 3, 5, 7, 15 and 137, so twelve
+baud-counter mutants survive; it always writes `IRQ_EN` just before relying on it, so a mutant where
 writing any other register clears `IRQ_EN[3]` survives; its 14 unmapped addresses do not
 include `0x84` or `0x88`. Random finds all of those on most seeds. Random in turn misses
 exact alignments the directed suite constructs on purpose. That is the textbook argument
@@ -173,8 +173,8 @@ predictions were committed in `docs/PREREG.md`, and only then were the 1,000 con
 mutants drawn, once. `harness/guard.py` refuses to draw them unless the plan is marked
 frozen and every file the score depends on is committed; it records the commit and a hash
 of each of those files, and `tests/test_guards.py` fails if any of them changes later. The
-directed suite was written from the spec and a test plan by someone who had seen no
-mutant, no mutant result and no RTL, and was closed to coverage before it met a mutant.
+directed suite was written from the spec and a test plan, without opening the RTL, any
+mutant or any mutant result, and was closed to coverage before it met a mutant.
 
 One prediction was wrong, and is reported as wrong: I predicted formal would kill nothing
 that simulation missed, and it killed three. Everything done after the sample was opened
@@ -200,9 +200,10 @@ architecture and the discipline, not the library.
 
 ## 13. What did the surviving mutants teach you?
 
-That each technique's misses look like its author. The directed suite's 26: twelve in the
-baud counters, because I, or rather the test plan, thought "small divisors plus one
-realistic and one large" was enough, and no divisor used has bit 4, 5 or 6 set. One of
+That each technique's misses look like whoever set it up. The directed suite's 26: twelve
+in the baud counters, because the test plan settled for "small divisors plus one
+realistic and one large", and no divisor it uses (0, 1, 2, 3, 5, 7, 15, 137) has bit 4, 5
+or 6 set. One of
 those I checked by hand: it scrambles the order the counter visits its values, and at
 divisor 137 the scrambled walk still takes exactly 138 cycles, so even the large-divisor
 test cannot see it. Two address aliases outside my list of unmapped addresses. Two

@@ -10,7 +10,7 @@ from __future__ import annotations
 from .common import RESULTS, ROOT, load
 
 COUNTER = ("a conditional bit flip inside a baud counter. It scrambles the order in which the counter visits "
-           "its values; at the divisors the suite uses (0 to 7, 15, 137) it either never triggers or the "
+           "its values; at the divisors the suite uses (0, 1, 2, 3, 5, 7, 15, 137) it either never triggers or the "
            "scrambled walk still takes the same number of cycles per bit (checked by hand for 495 at 137)")
 
 WHY = {
@@ -38,7 +38,7 @@ WHY = {
     139: "bit 4 of the receiver's half-period stuck at 0: needs a divisor whose half period has bit 4 set "
          "(no divisor the suite uses has bit 4, 5 or 6 set).",
     516: "bit 5 of the receiver's half-period stuck at 0: same gap as 139.",
-    547: "`rx_div[4]` stuck at 0: needs a receive divisor with bit 4 set; 0 to 7, 15 and 137 do not have it.",
+    547: "`rx_div[4]` stuck at 0: needs a receive divisor with bit 4 set; none the suite uses has it.",
     58: COUNTER + " (`rx_timer[7]` flips when bit 5 is set).",
     782: COUNTER + " (`rx_timer[5]` flips when bit 6 is set).",
     495: COUNTER + " (`tx_phase` increment, bit 3 when bit 7).",

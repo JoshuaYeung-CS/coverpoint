@@ -15,7 +15,7 @@ language in the project pool before this: 0.
 
 The cost of this choice is that one desk wrote the spec, the design and the bench. Two
 things push back on that: the bugs are mechanical (entry 2), and the design and both
-checkers were written independently from the spec (entry 6).
+checkers were written in separate passes from the spec alone (entry 6).
 
 ## 2. Mechanical bugs, not planted ones
 
@@ -56,11 +56,12 @@ it reaches a port, so every arm is an upper bound on its real-world counterpart,
 
 ## 6. Three implementations of the spec, written apart
 
-The RTL, the Python model and the Verilog specification shadow were each written from
-`docs/SPEC.md` without sight of the others (`notes/INTEGRATION.md`). **The numbers:** 0
+The RTL, the Python model and the Verilog specification shadow were written in separate
+passes, each from `docs/SPEC.md` alone and before the others were opened
+(`notes/INTEGRATION.md`). **The numbers:** 0
 lockstep mismatches between RTL and model at first contact and since; the RTL is proved
-equal to the shadow for all time. Both the RTL author and the model author flagged the
-same four ambiguous sentences and resolved them the same way.
+equal to the shadow for all time. The notes from the RTL pass and the model pass flag the
+same four ambiguous sentences, resolved the same way.
 
 ## 7. Equal cycles, mean over seeds
 
@@ -160,7 +161,7 @@ Verilator line and toggle coverage of the original RTL is reported as a suppleme
 
 ## 17. The directed suite was written blind
 
-It was written from the spec and a test plan (`docs/TESTPLAN.md`) without access to any
+It was written from the spec and a test plan (`docs/TESTPLAN.md`) without opening any
 mutant, mutant result or the RTL, closed to the functional coverage model, and only then
 run against mutants. **The number:** 16 tests, 11,690 cycles, all 98 bins.
 

@@ -1,0 +1,7 @@
+{
+ "harness/run.py": {
+  "sha256": "b3f4107ad85be78c0c8bc080e8aefba575e97c0d0a6cc81c9a15172b4ab07cd0",
+  "deviation": 2,
+  "reason": "reproduce compares outcomes with one load-dependent by-product removed (the depth reached by an unresolved equivalence check); adds --compare-only. No verdict, score or results file changed."
+ }
+}

@@ -13,7 +13,7 @@ it.
       {\textbf{UART Peripheral Verification Study} $|$ \emph{SystemVerilog, Python (cocotb, pyuvm), Verilator, Yosys, SymbiYosys}}{Sep 2026 -- Present}
       \resumeItemListStart
         \resumeItem{Measured how many hardware bugs each verification technique catches on an APB UART I designed in SystemVerilog, scoring hand-written directed tests, constrained-random stimulus and formal checks against 1,000 machine-generated design mutations instead of bugs I planted myself.}
-        \resumeItem{Built a UVM-style testbench in Python with a cycle-accurate reference model and a functional coverage model; directed and constrained-random tests caught the same 97\% of bugs at equal simulation cost, and the three reset bugs neither could reach were found by the formal search.}
+        \resumeItem{Built a UVM-style testbench in Python with a cycle-accurate reference model and a functional coverage model; directed and constrained-random tests each caught 97\% of bugs at equal simulation cost, and the reset bugs neither could reach were found by the formal search.}
         \resumeItem{Proved the design correct against its specification for all time by induction, adding the strengthening invariants the proof needed, and fixed the scoring plan before drawing the mutants so that every reported figure regenerates from one command.}
       \resumeItemListEnd
 %% <<< block: coverpoint
@@ -30,10 +30,10 @@ Two-bullet version, for a page at capacity: keep bullets 1 and 2.
 | 1,000 machine-generated design mutations | `results/confirmatory/mutants.json`; Yosys `mutate`, seed 20260919 |
 | instead of bugs I planted myself | no mutant was placed by hand; the seed was committed before the draw (`results/confirmatory/OPENED.json`) |
 | UVM-style testbench in Python | `bench/tb/`: pyuvm sequence items, sequencers, drivers, monitors, environment, scoreboard, tests |
-| cycle-accurate reference model | `bench/model.py`, written from the spec apart from the RTL; 303 tests in `tests/test_model.py` |
+| cycle-accurate reference model | `bench/model.py`, written from the spec alone, before the RTL was opened; 303 tests in `tests/test_model.py` |
 | functional coverage model | `bench/tb/coverage.py`, 98 bins |
-| the same 97% at equal simulation cost | directed 97.2%, random 96.9% as the mean of ten seeds, both at 11,690 cycles; under-claimed as "97%" and as "the same", which is what the pre-registered null says |
-| three reset bugs neither could reach were found by the formal search | mutants 314, 611, 969 in `docs/SURVIVORS.md`: killed by the formal arm only |
+| each caught 97% at equal simulation cost | directed 97.2%, random 96.9% as the mean of ten seeds, both at 11,690 cycles; rounded to "97%". "Each", not "the same": they do not kill the same mutants (README finding 2) |
+| the reset bugs neither could reach were found by the formal search | mutants 314, 611, 969 in `docs/SURVIVORS.md`: killed by the formal arm only |
 | proved correct against its specification for all time by induction | `results/proof.json`: PASS with `formal/invariants.svh`, all 256 divisors; "correct against its specification" is the claim, not "correct" |
 | adding the strengthening invariants the proof needed | the same proof returns UNKNOWN without them (`results/proof.json`); `DECISIONS.md` entry 13 |
 | fixed the scoring plan before drawing the mutants | `docs/PREREG.md`, frozen at commit `9cc02e7`; enforced by `harness/guard.py` and `tests/test_guards.py` |
@@ -48,7 +48,8 @@ Two-bullet version, for a page at capacity: keep bullets 1 and 2.
   The stack line names pyuvm so nobody has to guess. If a posting's keyword filter needs
   the three letters, they are there, attached to the truth.
 - **One system number per bullet**: 1,000 in the first (the size of the evidence), 97% in
-  the second, none in the third. The 85% formal score is left out on purpose: without the
+  the second (the count of reset bugs, three, is left out to keep it to one), none in the
+  third. The 85% formal score is left out on purpose: without the
   sentence explaining the bound it reads as "formal is worse", which is not what was found.
 - **Rejected for bullet 2:** "constrained-random matched directed testing". True, but it
   invites "so why write directed tests?"; the bullet says both halves, including what

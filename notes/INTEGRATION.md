@@ -1,7 +1,7 @@
 # Integration: three implementations of one spec
 
-`docs/SPEC.md` was written first. Three things were then written from it, each without
-sight of the others:
+`docs/SPEC.md` was written first. Three things were then written from it in separate passes, each
+from the spec alone and before the others were opened:
 
 | what | where | written from |
 |---|---|---|
@@ -20,8 +20,8 @@ sight of the others:
   strengthening.
 
 Zero disagreements is a statement about the spec as much as about the implementations:
-both authors independently listed the same ambiguous sentences and resolved each the same
-way. The ones that would have produced a port-visible difference had they been read the
+the notes kept during the RTL pass and the model pass (`notes/RTL-NOTES.md`,
+`notes/MODEL-NOTES.md`) list the same ambiguous sentences, resolved the same way. The ones that would have produced a port-visible difference had they been read the
 other way:
 
 1. **When the transmitter is available again.** Section 5 says both "at the last edge of
@@ -31,18 +31,18 @@ other way:
    read data is live in both cycles of a read. An implementation that gated it would
    mismatch on the setup cycle of every read.
 3. **Loopback latency is three edges, not two.** `s2` is `txd` delayed by two flops and
-   start detection reads the pre-edge `s2`, so `c = s + 3`. The RTL author got this wrong
-   in a smoke-test expectation first; the RTL was right.
+   start detection reads the pre-edge `s2`, so `c = s + 3`. The first smoke-test
+   expectation written for the RTL had this wrong; the RTL was right.
 4. **`h = 0`** (divisors 0 and 1): the detection edge is the start check, so no false
    start is possible and a one-cycle glitch starts a full frame.
 
 ## Bench bugs found along the way
 
-Found by the people using the bench, not by the bench:
+Found while using the bench, not by the bench:
 
 - `coverage.py` dropped two coverpoints (14 of 98 bins, the same-edge and mid-frame ones)
-  from its report because of a name filter. Found by the author of the directed suite,
-  who noticed the denominator was 84. Fixed before anything was scored for the record.
+  from its report because of a name filter. Found while writing the directed suite,
+  when the denominator came out as 84. Fixed before anything was scored for the record.
 - `TxMonitor.line` is never updated from register writes, so the transaction log it
   publishes decodes every frame as 8N1 at divisor 0. It makes no pass/fail decision and
   feeds nothing that is scored. Left as is and listed in the README under what a

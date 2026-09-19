@@ -153,19 +153,44 @@ def score(sample: str, out_dir: Path) -> dict:
     return outcomes
 
 
-def reproduce(check: bool) -> int:
+def stable(name: str, obj):
+    """What `reproduce` compares. Everything, except one by-product: for a mutant whose
+    equivalence check came back 'unresolved', the depth the search happened to reach before
+    its time cap. That depth depends on how busy the machine is; the verdict does not.
+    (Amended after the confirmatory sample was opened: docs/DEVIATIONS.md, item 2.)"""
+    if name != "outcomes.json":
+        return obj
+    out = {**obj, "mutants": {}}
+    for k, v in obj["mutants"].items():
+        eq = v["equivalence"]
+        if eq["verdict"] == "unresolved":
+            eq = {x: y for x, y in eq.items() if x != "frames"}
+        out["mutants"][k] = {**v, "equivalence": eq}
+    return out
+
+
+def compare() -> list[str]:
+    """Compare the last reproduce run (build/reproduce/) with the committed results."""
     drift = []
-    if prove.main(BUILD / "reproduce") != load(RESULTS / "proof.json"):
+    if load(BUILD / "reproduce" / "proof.json") != load(RESULTS / "proof.json"):
         drift.append("proof.json")
     for sample in ("dev", "confirmatory"):
-        committed = RESULTS / sample
+        committed, out = RESULTS / sample, BUILD / "reproduce" / sample
         if not (committed / "outcomes.json").exists():
             continue
-        out = BUILD / "reproduce" / sample
-        score(sample, out)
         for name in ("mutants.json", "outcomes.json", "score.json"):
-            if load(out / name) != load(committed / name):
+            if stable(name, load(out / name)) != stable(name, load(committed / name)):
                 drift.append(f"{sample}/{name}")
+    return drift
+
+
+def reproduce(check: bool, rerun: bool = True) -> int:
+    if rerun:
+        prove.main(BUILD / "reproduce")
+        for sample in ("dev", "confirmatory"):
+            if (RESULTS / sample / "outcomes.json").exists():
+                score(sample, BUILD / "reproduce" / sample)
+    drift = compare()
     report.main_report()
     if check:
         drift += report.check_cited()
@@ -184,6 +209,8 @@ def main() -> None:
     s.add_argument("sample", choices=("dev", "confirmatory"))
     r = sub.add_parser("reproduce")
     r.add_argument("--check", action="store_true")
+    r.add_argument("--compare-only", action="store_true",
+                   help="do not re-run; compare the last run in build/reproduce/ with results/")
     sub.add_parser("report")
     a = ap.parse_args()
     if a.cmd == "prove":
@@ -192,7 +219,7 @@ def main() -> None:
         score(a.sample, RESULTS / a.sample)
         report.main_report()
     elif a.cmd == "reproduce":
-        sys.exit(reproduce(a.check))
+        sys.exit(reproduce(a.check, rerun=not a.compare_only))
     else:
         report.main_report()
 

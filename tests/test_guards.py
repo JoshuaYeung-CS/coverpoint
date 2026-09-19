@@ -52,9 +52,28 @@ def test_confirmatory_results_imply_an_opening_record():
 
 
 def test_frozen_files_have_not_drifted():
+    """A frozen file must still be what it was when the sample was opened. The only way
+    round that is an entry in docs/amendments.json, which names the file, its new hash and
+    the item in docs/DEVIATIONS.md that explains the change. OPENED.json is never edited."""
     if not guard.OPENED.exists():
         pytest.skip("confirmatory sample not opened yet")
     frozen = load(guard.OPENED)["frozen_sha256"]
+    amendments = load(ROOT / "docs" / "amendments.json") if (ROOT / "docs" / "amendments.json").exists() else {}
+    deviations = (ROOT / "docs" / "DEVIATIONS.md").read_text()
     for path, digest in frozen.items():
         now = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
-        assert now == digest, f"{path} changed after the confirmatory sample was opened"
+        if now == digest:
+            continue
+        assert path in amendments and amendments[path]["sha256"] == now, \
+            f"{path} changed after the confirmatory sample was opened"
+        assert path in deviations, f"{path} is amended but docs/DEVIATIONS.md does not mention it"
+
+
+def test_results_files_are_as_produced():
+    """The committed confirmatory outcomes must be the ones written at the opening commit's
+    successor: no amendment is allowed to touch results/."""
+    if not guard.OPENED.exists():
+        pytest.skip("confirmatory sample not opened yet")
+    changed = git("log", "--format=%h", "--", "results/confirmatory/outcomes.json",
+                  "results/confirmatory/score.json", "results/confirmatory/mutants.json").split()
+    assert len(changed) == 1, f"confirmatory results were committed more than once: {changed}"

@@ -14,7 +14,24 @@ opened.
    directed suite's 26 survivors and the formal arm's misses and would have swamped the
    README.
 
-Nothing else. No frozen file has changed since the sample was opened. No test, knob,
+2. **One frozen file was amended after the sample was opened: `harness/run.py`, its
+   comparison logic only.** The first full `make reproduce` reproduced every mutant, every
+   kill cycle of every simulation run, every formal verdict and frame, every equivalence
+   verdict and the whole score table bit for bit, and still reported drift, in one
+   by-product: for a mutant whose equivalence check comes back `unresolved`, the harness
+   also records how deep the search got before its time cap, and that depth depends on
+   how busy the machine is (mutant 50 on dev: 33 cycles when first scored, 30 when
+   reproduced under load; mutant 7: 30 and 28). The verdicts did not change and nothing
+   reads that depth. The pre-registration's own rule is that budgets are depths, never
+   seconds; this one recorded field broke it. `reproduce` now compares outcomes with that
+   field removed for unresolved mutants (`harness/run.py: stable`), and gained
+   `--compare-only` so the amended comparison could be applied to the run that exposed the
+   problem. **No file under `results/` was changed, and no verdict, kill or score.**
+   `results/confirmatory/OPENED.json` is untouched; the amended hash is recorded in
+   `docs/amendments.json`, and `tests/test_guards.py` accepts a changed frozen file only
+   if it is listed there and named here.
+
+Nothing else. No other frozen file has changed since the sample was opened. No test, knob,
 sequence, property, budget or scoring rule was changed after seeing a confirmatory result.
 
 ## A prediction that was wrong

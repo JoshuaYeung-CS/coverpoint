@@ -37,7 +37,7 @@ cycles emit nothing.
 write-1-to-clear bit and a hardware set land on the same bit — regardless of
 whether that bit was already 1 before the edge. The alternative reading (only
 when a clear was genuinely lost, i.e. the bit was previously 1) was rejected as
-less literal: the brief describes it as "a W1C and a set hit the same bit at the
+less literal: the event is defined as "a W1C and a set hit the same bit at the
 same edge". The `IRQ_STAT` value itself is unaffected by this choice; set always
 wins (SPEC 4.6, 7).
 

@@ -9,8 +9,8 @@ interrupt, written in SystemVerilog to a spec fixed at the clock-cycle level
 (`docs/SPEC.md`). Around it:
 
 - a UVM-style bench in Python (pyuvm on cocotb, Verilator underneath): sequence items,
-  sequencers, drivers, monitors, an environment, a lockstep scoreboard against an
-  independently written reference model, a 98-bin functional coverage model, a 16-test
+  sequencers, drivers, monitors, an environment, a lockstep scoreboard against a
+  reference model written from the spec alone, a 98-bin functional coverage model, a 16-test
   directed suite and a constrained-random test;
 - a formal side: a port-only property set, and an **unbounded proof that the design
   matches its specification on every output, for all time and all 256 baud divisors**
@@ -70,8 +70,8 @@ costs on one laptop, not budgets, and are not regenerated.
    all 98 bins on every seed (between cycle 7,412 and cycle 76,926) and keeps finding
    mutants afterwards. The smoke test covers 71% of lines and kills 48.2% of mutants.
 7. **What the survivors are.** Of the directed suite's 26 survivors, 12 are stuck or
-   conditionally flipped bits in the baud counters that the suite's divisors (0 to 7, 15
-   and 137) do not expose, two are address aliases at `0x84` and `0x88` that its 14
+   conditionally flipped bits in the baud counters that the suite's divisors (0, 1, 2, 3,
+   5, 7, 15 and 137) do not expose, two are address aliases at `0x84` and `0x88` that its 14
    unmapped addresses do not include, two are cross-register interference that its habit
    of writing a register immediately before relying on it hides, three are data- and
    timing-dependent corruption of a FIFO slot, and three are the reset-value mutants of
@@ -143,13 +143,15 @@ than one clock, and someone else reviewing the plan.
   against every arm. Every killed mutant gets the bounded half of the same check; one
   that came back "equivalent" would halt the run. None did.
 - **The directed suite was written blind**: from the spec and a test plan
-  (`docs/TESTPLAN.md`), without sight of any mutant, any mutant result or the RTL, and
+  (`docs/TESTPLAN.md`), without opening any mutant, any mutant result or the RTL, and
   closed to the coverage model before it met a mutant.
 - **The design and its checkers were written apart.** RTL, Python reference model and
-  formal specification shadow each came from the spec alone. First contact: zero
+  formal specification shadow were separate passes, each from the spec alone. First contact: zero
   mismatches, and then the proof (`notes/INTEGRATION.md`).
-- **Deviations are logged** in `docs/DEVIATIONS.md`, and a test fails if any frozen file
-  changes after the confirmatory sample was opened.
+- **Deviations are logged** in `docs/DEVIATIONS.md`. A test fails if any frozen file
+  changes after the confirmatory sample was opened, unless the change is recorded in
+  `docs/amendments.json` and explained there. There is one such amendment (the comparison
+  logic of `make reproduce`); no result changed.
 
 ## Reproduce
 
