@@ -55,7 +55,7 @@ def parse_line(line: str) -> dict:
     return rec
 
 
-def generate(sample: str, seed: int, count: int) -> dict:
+def generate(sample: str, seed: int, count: int, out_dir: Path | None = None) -> dict:
     guard.check_sample_allowed(sample, seed, count)
     out = BUILD / sample
     out.mkdir(parents=True, exist_ok=True)
@@ -86,7 +86,7 @@ def generate(sample: str, seed: int, count: int) -> dict:
         "netlist_sha256": hashlib.sha256(text.encode()).hexdigest(),
         "mutants": mutants,
     }
-    dump(RESULTS / sample / "mutants.json", record)
+    dump((out_dir or RESULTS / sample) / "mutants.json", record)
     return record
 
 

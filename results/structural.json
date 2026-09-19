@@ -1,0 +1,68 @@
+{
+ "directed": {
+  "branch": {
+   "hit": 40,
+   "percent": 100.0,
+   "points": 40
+  },
+  "expr": {
+   "hit": 141,
+   "percent": 99.3,
+   "points": 142
+  },
+  "line": {
+   "hit": 31,
+   "percent": 100.0,
+   "points": 31
+  },
+  "toggle": {
+   "hit": 822,
+   "percent": 83.0,
+   "points": 990
+  }
+ },
+ "random_one_seed_equal_cycles": {
+  "branch": {
+   "hit": 40,
+   "percent": 100.0,
+   "points": 40
+  },
+  "expr": {
+   "hit": 140,
+   "percent": 98.6,
+   "points": 142
+  },
+  "line": {
+   "hit": 31,
+   "percent": 100.0,
+   "points": 31
+  },
+  "toggle": {
+   "hit": 816,
+   "percent": 82.4,
+   "points": 990
+  }
+ },
+ "smoke": {
+  "branch": {
+   "hit": 33,
+   "percent": 82.5,
+   "points": 40
+  },
+  "expr": {
+   "hit": 110,
+   "percent": 77.5,
+   "points": 142
+  },
+  "line": {
+   "hit": 22,
+   "percent": 71.0,
+   "points": 31
+  },
+  "toggle": {
+   "hit": 305,
+   "percent": 30.8,
+   "points": 990
+  }
+ }
+}

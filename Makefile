@@ -10,7 +10,12 @@ CONDA ?= $(HOME)/miniconda3/bin/conda
 export PATH := $(ROOT)/.venv/bin:$(ROOT)/.cenv/bin:$(PATH)
 export YOWASP_CACHE_DIR := $(ROOT)/.cache/yowasp
 
-.PHONY: reproduce test lint tools dev confirm clean
+# ABC (Berkeley, BSD-style licence) is the bit-level model checker behind the mutant runs.
+# It is built from source at a pinned commit into .tools/, about nine minutes with the
+# system C compiler, roughly 8 MB to download. Nothing is installed outside the project.
+ABC_SHA := 3660a63a392b276616dd56ffee7e47b29b5df95e
+
+.PHONY: reproduce test lint tools dev confirm prove clean
 
 # Re-run the whole scored experiment from the RTL up, print the tables, and exit non-zero
 # if any number differs from the committed results or from a figure quoted in the docs.
@@ -23,7 +28,7 @@ test: tools
 lint: tools
 	verilator --lint-only -Wall rtl/cp_fifo.sv rtl/cp_uart.sv --top-module cp_uart
 
-tools: .venv/.ok .cenv/.ok
+tools: .venv/.ok .cenv/.ok .tools/abc/abc
 .venv/.ok: requirements.txt
 	python3 -m venv .venv
 	.venv/bin/pip install -q --disable-pip-version-check -r requirements.txt
@@ -32,6 +37,16 @@ tools: .venv/.ok .cenv/.ok
 	CONDA_PKGS_DIRS=$(ROOT)/.conda-pkgs $(CONDA) create -y -q -p $(ROOT)/.cenv -c conda-forge --override-channels verilator=5.052 make
 	rm -rf $(ROOT)/.conda-pkgs
 	touch $@
+
+.tools/abc/abc:
+	mkdir -p .tools && rm -rf .tools/abc .tools/abc-$(ABC_SHA)
+	curl -sL -o .tools/abc.tar.gz https://github.com/berkeley-abc/abc/archive/$(ABC_SHA).tar.gz
+	tar xzf .tools/abc.tar.gz -C .tools && mv .tools/abc-$(ABC_SHA) .tools/abc
+	$(MAKE) -C .tools/abc ABC_USE_NO_READLINE=1 ABC_USE_NO_PTHREADS=1 -j8 abc > .tools/abc-build.log 2>&1
+
+# The unbounded proof of the original design, with and without the invariants.
+prove: tools
+	$(PY) -m harness.run prove
 
 # The development sample may be re-run and looked at freely.
 dev: tools

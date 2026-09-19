@@ -1,0 +1,440 @@
+{
+ "arms": {
+  "any_simulation": {
+   "ci95": [
+    0.9702,
+    0.9991
+   ],
+   "killed": 185,
+   "score": 0.9946,
+   "survived": 1
+  },
+  "anything": {
+   "ci95": [
+    0.9702,
+    0.9991
+   ],
+   "killed": 185,
+   "score": 0.9946,
+   "survived": 1
+  },
+  "directed": {
+   "ci95": [
+    0.9314,
+    0.9851
+   ],
+   "cycles": 11690,
+   "killed": 180,
+   "score": 0.9677,
+   "survived": 6
+  },
+  "formal": {
+   "ci95": [
+    0.797,
+    0.8983
+   ],
+   "deepest_kill_frame": 24,
+   "frames": 25,
+   "killed": 159,
+   "max_div": 1,
+   "median_frame_of_kill": 7,
+   "score": 0.8548,
+   "survived": 27,
+   "timeout": [],
+   "undecided": 27
+  },
+  "random_equal_cycles": {
+   "cycles": 11690,
+   "max_killed": 183,
+   "mean_killed": 179.6,
+   "mean_score": 0.9656,
+   "min_killed": 178,
+   "per_seed_killed": [
+    178,
+    179,
+    178,
+    179,
+    179,
+    180,
+    179,
+    179,
+    182,
+    183
+   ],
+   "union": {
+    "ci95": [
+     0.9537,
+     0.9945
+    ],
+    "killed": 183,
+    "score": 0.9839,
+    "survived": 3
+   }
+  },
+  "random_long": {
+   "cycles": 116900,
+   "max_killed": 185,
+   "mean_killed": 184.0,
+   "mean_score": 0.9892,
+   "min_killed": 182,
+   "per_seed_killed": [
+    185,
+    182,
+    185,
+    184,
+    183,
+    183,
+    184,
+    185,
+    184,
+    185
+   ],
+   "union": {
+    "ci95": [
+     0.9702,
+     0.9991
+    ],
+    "killed": 185,
+    "score": 0.9946,
+    "survived": 1
+   }
+  },
+  "smoke": {
+   "ci95": [
+    0.4236,
+    0.5659
+   ],
+   "cycles": 77,
+   "killed": 92,
+   "score": 0.4946,
+   "survived": 94
+  }
+ },
+ "coverage": {
+  "bins": 98,
+  "directed_cumulative": [
+   {
+    "bins_hit_so_far": 30,
+    "cycles_so_far": 388,
+    "test": "dir_reset_and_regs"
+   },
+   {
+    "bins_hit_so_far": 37,
+    "cycles_so_far": 589,
+    "test": "dir_error_access"
+   },
+   {
+    "bins_hit_so_far": 49,
+    "cycles_so_far": 1293,
+    "test": "dir_tx_formats"
+   },
+   {
+    "bins_hit_so_far": 55,
+    "cycles_so_far": 1549,
+    "test": "dir_tx_fifo_and_enable"
+   },
+   {
+    "bins_hit_so_far": 59,
+    "cycles_so_far": 2361,
+    "test": "dir_tx_same_edge"
+   },
+   {
+    "bins_hit_so_far": 64,
+    "cycles_so_far": 3122,
+    "test": "dir_midframe_config"
+   },
+   {
+    "bins_hit_so_far": 71,
+    "cycles_so_far": 3450,
+    "test": "dir_rx_basic"
+   },
+   {
+    "bins_hit_so_far": 81,
+    "cycles_so_far": 4204,
+    "test": "dir_rx_errors_and_enable"
+   },
+   {
+    "bins_hit_so_far": 83,
+    "cycles_so_far": 4952,
+    "test": "dir_rx_false_start"
+   },
+   {
+    "bins_hit_so_far": 88,
+    "cycles_so_far": 5168,
+    "test": "dir_rx_fifo"
+   },
+   {
+    "bins_hit_so_far": 91,
+    "cycles_so_far": 6764,
+    "test": "dir_rx_same_edge"
+   },
+   {
+    "bins_hit_so_far": 91,
+    "cycles_so_far": 6959,
+    "test": "dir_loopback"
+   },
+   {
+    "bins_hit_so_far": 94,
+    "cycles_so_far": 7599,
+    "test": "dir_irq"
+   },
+   {
+    "bins_hit_so_far": 95,
+    "cycles_so_far": 7792,
+    "test": "dir_reset_midframe"
+   },
+   {
+    "bins_hit_so_far": 96,
+    "cycles_so_far": 8293,
+    "test": "dir_baud_realistic"
+   },
+   {
+    "bins_hit_so_far": 98,
+    "cycles_so_far": 11690,
+    "test": "dir_baud_large"
+   }
+  ],
+  "random_bins_at_equal_budget": {
+   "0": 95,
+   "1": 96,
+   "2": 94,
+   "3": 95,
+   "4": 95,
+   "5": 95,
+   "6": 96,
+   "7": 90,
+   "8": 95,
+   "9": 98
+  },
+  "random_cycle_of_closure": {
+   "0": 35075,
+   "1": 76926,
+   "2": 22863,
+   "3": 28846,
+   "4": 36162,
+   "5": 39166,
+   "6": 44649,
+   "7": 28529,
+   "8": 33009,
+   "9": 7412
+  },
+  "random_missed_at_long_budget": {
+   "0": [],
+   "1": [],
+   "2": [],
+   "3": [],
+   "4": [],
+   "5": [],
+   "6": [],
+   "7": [],
+   "8": [],
+   "9": []
+  },
+  "smoke_bins": 16
+ },
+ "curve": [
+  {
+   "cycles": 100,
+   "directed_killed": 53,
+   "random_mean_bins": 25.5,
+   "random_mean_killed": 102.5
+  },
+  {
+   "cycles": 300,
+   "directed_killed": 86,
+   "random_mean_bins": 41.3,
+   "random_mean_killed": 132.0
+  },
+  {
+   "cycles": 1000,
+   "directed_killed": 139,
+   "random_mean_bins": 66.1,
+   "random_mean_killed": 163.8
+  },
+  {
+   "cycles": 3000,
+   "directed_killed": 149,
+   "random_mean_bins": 85.3,
+   "random_mean_killed": 175.3
+  },
+  {
+   "cycles": 11690,
+   "directed_killed": 180,
+   "random_mean_bins": 94.9,
+   "random_mean_killed": 179.6
+  },
+  {
+   "cycles": 30000,
+   "directed_killed": 180,
+   "random_mean_bins": 97.3,
+   "random_mean_killed": 181.9
+  },
+  {
+   "cycles": 116900,
+   "directed_killed": 180,
+   "random_mean_bins": 98.0,
+   "random_mean_killed": 184.0
+  }
+ ],
+ "equivalent": 14,
+ "formal_vs_simulation": {
+  "formal_not_directed": [],
+  "formal_not_random_equal_any_seed": [],
+  "formal_only": [],
+  "simulation_only": 26
+ },
+ "mutants": 200,
+ "paired_directed_vs_random_equal": {
+  "0": {
+   "directed_only": 4,
+   "random_only": 2
+  },
+  "1": {
+   "directed_only": 4,
+   "random_only": 3
+  },
+  "2": {
+   "directed_only": 4,
+   "random_only": 2
+  },
+  "3": {
+   "directed_only": 4,
+   "random_only": 3
+  },
+  "4": {
+   "directed_only": 3,
+   "random_only": 2
+  },
+  "5": {
+   "directed_only": 3,
+   "random_only": 3
+  },
+  "6": {
+   "directed_only": 3,
+   "random_only": 2
+  },
+  "7": {
+   "directed_only": 4,
+   "random_only": 3
+  },
+  "8": {
+   "directed_only": 2,
+   "random_only": 4
+  },
+  "9": {
+   "directed_only": 1,
+   "random_only": 4
+  }
+ },
+ "sample": "dev",
+ "scored": 186,
+ "survivors": {
+  "anything": [
+   {
+    "cell": "$procdff$540",
+    "id": 50,
+    "mode": "const1",
+    "port": "Q",
+    "portbit": 11,
+    "src": [
+     "rtl/cp_uart.sv:145.16-145.28",
+     "rtl/cp_uart.sv:240.3-343.6"
+    ],
+    "wire": "tx_frame_pad",
+    "wirebit": 11
+   }
+  ],
+  "directed": [
+   {
+    "cell": "$procmux$362",
+    "id": 7,
+    "mode": "cnot1",
+    "port": "B",
+    "portbit": 5,
+    "src": [
+     "rtl/cp_uart.sv:296.20-296.29",
+     "rtl/cp_uart.sv:296.16-300.10"
+    ],
+    "wire": null,
+    "wirebit": null
+   },
+   {
+    "cell": "$procmux$310",
+    "id": 35,
+    "mode": "const0",
+    "port": "Y",
+    "portbit": 4,
+    "src": [
+     "rtl/cp_uart.sv:313.13-313.25",
+     "rtl/cp_uart.sv:313.9-321.12"
+    ],
+    "wire": null,
+    "wirebit": null
+   },
+   {
+    "cell": "$procdff$540",
+    "id": 50,
+    "mode": "const1",
+    "port": "Q",
+    "portbit": 11,
+    "src": [
+     "rtl/cp_uart.sv:145.16-145.28",
+     "rtl/cp_uart.sv:240.3-343.6"
+    ],
+    "wire": "tx_frame_pad",
+    "wirebit": 11
+   },
+   {
+    "cell": "$procdff$542",
+    "id": 100,
+    "mode": "cnot1",
+    "port": "Q",
+    "portbit": 3,
+    "src": [
+     "rtl/cp_uart.sv:50.16-50.22",
+     "rtl/cp_uart.sv:240.3-343.6"
+    ],
+    "wire": "tx_div",
+    "wirebit": 3
+   },
+   {
+    "cell": "$memory\\u_tx_fifo.mem$wrmux[3][4][0]$847",
+    "id": 118,
+    "mode": "cnot1",
+    "port": "A",
+    "portbit": 0,
+    "src": [],
+    "wire": null,
+    "wirebit": null
+   },
+   {
+    "cell": "$memory\\u_tx_fifo.mem$wrmux[3][2][0]$837",
+    "id": 161,
+    "mode": "cnot1",
+    "port": "A",
+    "portbit": 4,
+    "src": [],
+    "wire": null,
+    "wirebit": null
+   }
+  ],
+  "random_long_union": [
+   {
+    "cell": "$procdff$540",
+    "id": 50,
+    "mode": "const1",
+    "port": "Q",
+    "portbit": 11,
+    "src": [
+     "rtl/cp_uart.sv:145.16-145.28",
+     "rtl/cp_uart.sv:240.3-343.6"
+    ],
+    "wire": "tx_frame_pad",
+    "wirebit": 11
+   }
+  ]
+ },
+ "unresolved_survivors": [
+  50
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "status": "draft",
+ "samples": {
+  "dev": {"seed": 1, "count": 200},
+  "confirmatory": {"seed": 20260919, "count": 1000}
+ },
+ "confirmatory": {"seed": 20260919, "count": 1000},
+ "baseline_test": "smoke",
+ "directed": ["dir_reset_and_regs", "dir_error_access", "dir_tx_formats", "dir_tx_fifo_and_enable",
+              "dir_tx_same_edge", "dir_midframe_config", "dir_rx_basic", "dir_rx_errors_and_enable",
+              "dir_rx_false_start", "dir_rx_fifo", "dir_rx_same_edge", "dir_loopback", "dir_irq",
+              "dir_reset_midframe", "dir_baud_realistic", "dir_baud_large"],
+ "random": {"test": "random_mix", "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "budget_equal": 11690, "budget_long": 116900},
+ "formal": {"frames": 25, "max_div": 1, "safety_seconds": 900},
+ "equivalence": {"bmc_frames": 30, "pdr_frames": 200, "killed_check_frames": 30, "safety_seconds": 300},
+ "coverage_bins": 98
+}

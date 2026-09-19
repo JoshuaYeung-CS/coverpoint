@@ -1,0 +1,18 @@
+{
+ "with_invariants": {
+  "basecase": "pass",
+  "depth": 2,
+  "induction": "pass",
+  "induction_failed_on": [],
+  "status": "PASS"
+ },
+ "without_invariants": {
+  "basecase": "pass",
+  "depth": 2,
+  "induction": "FAIL",
+  "induction_failed_on": [
+   "a_rd_status"
+  ],
+  "status": "UNKNOWN"
+ }
+}

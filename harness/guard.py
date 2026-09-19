@@ -17,8 +17,13 @@ from .common import RESULTS, ROOT, dump, load
 
 PREREG_JSON = ROOT / "docs" / "prereg.json"
 OPENED = RESULTS / "confirmatory" / "OPENED.json"
-FROZEN_DIRS = ("rtl", "bench", "formal", "harness")
-FROZEN_FILES = ("docs/PREREG.md", "docs/prereg.json", "docs/SPEC.md", "requirements.txt")
+# Everything that can change an outcome. harness/report.py only renders results and is
+# deliberately not in the list.
+FROZEN_DIRS = ("rtl", "bench", "formal")
+FROZEN_FILES = ("docs/PREREG.md", "docs/prereg.json", "docs/SPEC.md", "requirements.txt", "Makefile",
+                "harness/common.py", "harness/mutants.py", "harness/simrun.py", "harness/formal.py",
+                "harness/equiv.py", "harness/aig.py", "harness/score.py", "harness/run.py",
+                "harness/prove.py", "harness/guard.py")
 
 
 class PreregError(RuntimeError):
