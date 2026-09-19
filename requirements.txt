@@ -1,0 +1,8 @@
+# Pinned: the mutant sample depends on the Yosys version, and proof outcomes on z3.
+cocotb==2.1.0
+cocotb-coverage==2.0
+pyuvm==5.0.0
+yowasp-yosys==0.69.0.0.post1233
+yowasp-nextpnr-ecp5==0.11.1.0.post826
+z3-solver==5.1.0.0
+pytest==9.1.1

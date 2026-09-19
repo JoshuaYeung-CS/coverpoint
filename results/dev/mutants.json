@@ -1,0 +1,2724 @@
+{
+ "count": 200,
+ "distinct_keys": 200,
+ "mutants": [
+  {
+   "cell": "$flatten\\u_rx_fifo.$procmux$210",
+   "id": 1,
+   "key": "const0|$flatten\\u_rx_fifo.$procmux$210|Y|5|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_fifo.sv:56.11-56.15",
+    "rtl/cp_fifo.sv:56.7-59.10"
+   ]
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$wrmux[1][2][0]$658",
+   "ctrlbit": 5,
+   "id": 2,
+   "key": "cnot0|$memory\\u_rx_fifo.mem$wrmux[1][2][0]$658|A|1|5",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": []
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:174$104",
+   "id": 3,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:174$104|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:171.22-171.32",
+    "rtl/cp_uart.sv:174.24-174.58"
+   ],
+   "wire": "rx_ovr_set",
+   "wirebit": 0
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:219$122",
+   "id": 4,
+   "key": "const1|$ternary$rtl/cp_uart.sv:219$122|Y|5|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:219.24-219.69"
+   ],
+   "wire": "rxdata_word",
+   "wirebit": 5
+  },
+  {
+   "cell": "$procdff$544",
+   "ctrlbit": 4,
+   "id": 5,
+   "key": "cnot0|$procdff$544|Q|1|4",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:52.16-52.24",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_phase",
+   "wirebit": 1
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:219$122",
+   "id": 6,
+   "key": "inv|$ternary$rtl/cp_uart.sv:219$122|B|3|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_fifo.sv:21.30-21.35",
+    "rtl/cp_uart.sv:219.24-219.69"
+   ],
+   "wire": "u_rx_fifo.rdata",
+   "wirebit": 3
+  },
+  {
+   "cell": "$procmux$362",
+   "ctrlbit": 7,
+   "id": 7,
+   "key": "cnot1|$procmux$362|B|5|7",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:296.20-296.29",
+    "rtl/cp_uart.sv:296.16-300.10"
+   ]
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$add$rtl/cp_fifo.sv:61$169",
+   "ctrlbit": 1,
+   "id": 8,
+   "key": "cnot1|$flatten\\u_rx_fifo.$add$rtl/cp_fifo.sv:61$169|Y|0|1",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:61.17-61.28"
+   ]
+  },
+  {
+   "cell": "$procmux$292",
+   "id": 9,
+   "key": "const0|$procmux$292|A|2|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:322.20-322.29",
+    "rtl/cp_uart.sv:322.16-341.10"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:102$44",
+   "id": 10,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:102$44|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:96.28-96.35",
+    "rtl/cp_uart.sv:102.21-102.40"
+   ],
+   "wire": "wr_done",
+   "wirebit": 0
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procdff$556",
+   "id": 11,
+   "key": "const0|$flatten\\u_tx_fifo.$procdff$556|Q|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:33.21-33.25",
+    "rtl/cp_fifo.sv:46.3-69.6"
+   ],
+   "wire": "u_tx_fifo.rptr",
+   "wirebit": 0
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:157$77",
+   "id": 12,
+   "key": "const0|$ternary$rtl/cp_uart.sv:157$77|A|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:20.25-20.28",
+    "rtl/cp_uart.sv:157.18-157.43"
+   ],
+   "wire": "rxd",
+   "wirebit": 0
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procdff$555",
+   "id": 13,
+   "key": "inv|$flatten\\u_tx_fifo.$procdff$555|Q|1|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:22.30-22.35",
+    "rtl/cp_fifo.sv:46.3-69.6"
+   ],
+   "wire": "u_tx_fifo.count",
+   "wirebit": 1
+  },
+  {
+   "cell": "$add$rtl/cp_uart.sv:147$74",
+   "id": 14,
+   "key": "const0|$add$rtl/cp_uart.sv:147$74|A|3|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:147.49-147.63"
+   ]
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:298$133",
+   "id": 15,
+   "key": "const0|$ternary$rtl/cp_uart.sv:298$133|B|3|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:298.21-298.68"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:127$62",
+   "id": 16,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:127$62|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:126.9-126.20",
+    "rtl/cp_uart.sv:127.24-127.86"
+   ],
+   "wire": "tx_end_edge",
+   "wirebit": 0
+  },
+  {
+   "cell": "$procmux$345",
+   "id": 17,
+   "key": "const1|$procmux$345|A|2|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:306.11-306.23",
+    "rtl/cp_uart.sv:306.7-341.10"
+   ]
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem$rdmux[0][0][0]$744",
+   "id": 18,
+   "key": "inv|$memory\\u_tx_fifo.mem$rdmux[0][0][0]$744|Y|2|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_fifo.sv:21.30-21.35"
+   ],
+   "wire": "u_tx_fifo.rdata",
+   "wirebit": 2
+  },
+  {
+   "cell": "$procdff$548",
+   "ctrlbit": 0,
+   "id": 19,
+   "key": "cnot0|$procdff$548|Q|7|0",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 7,
+   "src": [
+    "rtl/cp_uart.sv:57.15-57.21",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "rx_div",
+   "wirebit": 7
+  },
+  {
+   "cell": "$logic_not$rtl/cp_uart.sv:160$78",
+   "id": 20,
+   "key": "inv|$logic_not$rtl/cp_uart.sv:160$78|A|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:160.27-160.37"
+   ]
+  },
+  {
+   "cell": "$procmux$319",
+   "id": 21,
+   "key": "const0|$procmux$319|Y|3|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:323.13-323.43",
+    "rtl/cp_uart.sv:323.9-338.12"
+   ]
+  },
+  {
+   "cell": "$reduce_xor$rtl/cp_uart.sv:169$96",
+   "ctrlbit": 7,
+   "id": 22,
+   "key": "cnot0|$reduce_xor$rtl/cp_uart.sv:169$96|A|3|7",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:169.25-169.33"
+   ]
+  },
+  {
+   "cell": "$procdff$535",
+   "ctrlbit": 3,
+   "id": 23,
+   "key": "cnot0|$procdff$535|Q|4|3",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 4,
+   "src": [
+    "rtl/cp_uart.sv:75.60-75.73",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "ctrl_loopback",
+   "wirebit": 0
+  },
+  {
+   "cell": "$reduce_xor$rtl/cp_uart.sv:135$68",
+   "id": 24,
+   "key": "const0|$reduce_xor$rtl/cp_uart.sv:135$68|A|6|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 6,
+   "src": [
+    "rtl/cp_uart.sv:135.24-135.32"
+   ]
+  },
+  {
+   "cell": "$procmux$419",
+   "ctrlbit": 7,
+   "id": 25,
+   "key": "cnot1|$procmux$419|Y|3|7",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:268.48-268.48",
+    "rtl/cp_uart.sv:267.9-272.16"
+   ]
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$procmux$250",
+   "id": 26,
+   "key": "const0|$flatten\\u_rx_fifo.$procmux$250|A|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:47.9-47.17",
+    "rtl/cp_fifo.sv:47.5-68.8"
+   ]
+  },
+  {
+   "cell": "$procmux$397",
+   "id": 27,
+   "key": "const1|$procmux$397|Y|8|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 8,
+   "src": [
+    "rtl/cp_uart.sv:285.11-285.17",
+    "rtl/cp_uart.sv:285.7-300.10"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:329$138",
+   "id": 28,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:329$138|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:329.15-329.53"
+   ]
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:157$77",
+   "id": 29,
+   "key": "const1|$ternary$rtl/cp_uart.sv:157$77|A|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:20.25-20.28",
+    "rtl/cp_uart.sv:157.18-157.43"
+   ],
+   "wire": "rxd",
+   "wirebit": 0
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem$wrmux[2][1][0]$809",
+   "id": 30,
+   "key": "inv|$memory\\u_tx_fifo.mem$wrmux[2][1][0]$809|B|2|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 2,
+   "src": []
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem[1]$738",
+   "id": 31,
+   "key": "const1|$memory\\u_tx_fifo.mem[1]$738|Q|5|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 5,
+   "src": [],
+   "wire": "u_tx_fifo.mem[1]",
+   "wirebit": 5
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procdff$555",
+   "id": 32,
+   "key": "const1|$flatten\\u_tx_fifo.$procdff$555|Q|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:22.30-22.35",
+    "rtl/cp_fifo.sv:46.3-69.6"
+   ],
+   "wire": "u_tx_fifo.count",
+   "wirebit": 0
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem[0]$736",
+   "ctrlbit": 5,
+   "id": 33,
+   "key": "cnot0|$memory\\u_tx_fifo.mem[0]$736|Q|1|5",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 1,
+   "src": [],
+   "wire": "u_tx_fifo.mem[0]",
+   "wirebit": 1
+  },
+  {
+   "cell": "$logic_or$rtl/cp_uart.sv:99$40",
+   "id": 34,
+   "key": "inv|$logic_or$rtl/cp_uart.sv:99$40|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:96.9-96.16",
+    "rtl/cp_uart.sv:99.21-100.83"
+   ],
+   "wire": "acc_err",
+   "wirebit": 0
+  },
+  {
+   "cell": "$procmux$310",
+   "id": 35,
+   "key": "const0|$procmux$310|Y|4|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 4,
+   "src": [
+    "rtl/cp_uart.sv:313.13-313.25",
+    "rtl/cp_uart.sv:313.9-321.12"
+   ]
+  },
+  {
+   "cell": "$procmux$424",
+   "id": 36,
+   "key": "const0|$procmux$424|B|7|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 7,
+   "src": [
+    "rtl/cp_uart.sv:241.9-241.17",
+    "rtl/cp_uart.sv:241.5-342.8"
+   ]
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$wrmux[1][0][0]$644",
+   "id": 37,
+   "key": "const0|$memory\\u_rx_fifo.mem$wrmux[1][0][0]$644|B|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$ge$rtl/cp_uart.sv:329$136",
+   "id": 38,
+   "key": "inv|$ge$rtl/cp_uart.sv:329$136|A|2|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:329.16-329.31"
+   ]
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$rdmux[0][1][0]$594",
+   "id": 39,
+   "key": "const1|$memory\\u_rx_fifo.mem$rdmux[0][1][0]$594|Y|4|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 4,
+   "src": []
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:197$114",
+   "id": 40,
+   "key": "inv|$ternary$rtl/cp_uart.sv:197$114|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:196.15-196.22",
+    "rtl/cp_uart.sv:197.20-197.78"
+   ],
+   "wire": "irq_clr",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_not$rtl/cp_uart.sv:189$109",
+   "id": 41,
+   "key": "inv|$logic_not$rtl/cp_uart.sv:189$109|A|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:189.55-189.63"
+   ]
+  },
+  {
+   "cell": "$procdff$548",
+   "ctrlbit": 4,
+   "id": 42,
+   "key": "cnot0|$procdff$548|Q|5|4",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:57.15-57.21",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "rx_div",
+   "wirebit": 5
+  },
+  {
+   "cell": "$ge$rtl/cp_uart.sv:329$136",
+   "id": 43,
+   "key": "const0|$ge$rtl/cp_uart.sv:329$136|A|1|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:329.16-329.31"
+   ]
+  },
+  {
+   "cell": "$procdff$538",
+   "ctrlbit": 0,
+   "id": 44,
+   "key": "cnot0|$procdff$538|Q|2|0",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:43.15-43.23",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "irq_stat",
+   "wirebit": 2
+  },
+  {
+   "cell": "$procmux$462_CMP4",
+   "ctrlbit": 2,
+   "id": 45,
+   "key": "cnot0|$procmux$462_CMP4|A|3|2",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:89.17-89.17",
+    "rtl/cp_uart.sv:89.5-93.12"
+   ]
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$wren[1][1][0]$650",
+   "id": 46,
+   "key": "const0|$memory\\u_rx_fifo.mem$wren[1][1][0]$650|A|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$ne$rtl/cp_uart.sv:173$101",
+   "id": 47,
+   "key": "inv|$ne$rtl/cp_uart.sv:173$101|A|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:173.41-173.57"
+   ]
+  },
+  {
+   "cell": "$procdff$544",
+   "ctrlbit": 1,
+   "id": 48,
+   "key": "cnot0|$procdff$544|Q|4|1",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 4,
+   "src": [
+    "rtl/cp_uart.sv:52.16-52.24",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_phase",
+   "wirebit": 4
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$procdff$524",
+   "id": 49,
+   "key": "inv|$flatten\\u_rx_fifo.$procdff$524|Q|1|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:33.21-33.25",
+    "rtl/cp_fifo.sv:46.3-69.6"
+   ],
+   "wire": "u_rx_fifo.rptr",
+   "wirebit": 1
+  },
+  {
+   "cell": "$procdff$540",
+   "id": 50,
+   "key": "const1|$procdff$540|Q|11|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 11,
+   "src": [
+    "rtl/cp_uart.sv:145.16-145.28",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_frame_pad",
+   "wirebit": 11
+  },
+  {
+   "cell": "$procdff$536",
+   "id": 51,
+   "key": "inv|$procdff$536|Q|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:41.15-41.23",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "baud_div",
+   "wirebit": 0
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:157$77",
+   "id": 52,
+   "key": "inv|$ternary$rtl/cp_uart.sv:157$77|A|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:20.25-20.28",
+    "rtl/cp_uart.sv:157.18-157.43"
+   ],
+   "wire": "rxd",
+   "wirebit": 0
+  },
+  {
+   "cell": "$ne$rtl/cp_uart.sv:113$51",
+   "id": 53,
+   "key": "const0|$ne$rtl/cp_uart.sv:113$51|A|1|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:113.33-113.49"
+   ]
+  },
+  {
+   "cell": "$procmux$458",
+   "id": 54,
+   "key": "const1|$procmux$458|B|6|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 6,
+   "src": [
+    "rtl/cp_uart.sv:223.9-223.24",
+    "rtl/cp_uart.sv:223.5-234.8"
+   ]
+  },
+  {
+   "cell": "$add$rtl/cp_uart.sv:327$135",
+   "id": 55,
+   "key": "inv|$add$rtl/cp_uart.sv:327$135|Y|1|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:327.23-327.37"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:118$58",
+   "id": 56,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:118$58|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:20.30-20.33",
+    "rtl/cp_uart.sv:118.19-118.46"
+   ],
+   "wire": "u_rx_fifo.pop",
+   "wirebit": 0
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:215$118",
+   "id": 57,
+   "key": "inv|$eq$rtl/cp_uart.sv:215$118|B|2|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:215.26-215.42"
+   ]
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$wrmux[2][2][0]$690",
+   "ctrlbit": 3,
+   "id": 58,
+   "key": "cnot1|$memory\\u_rx_fifo.mem$wrmux[2][2][0]$690|Y|8|3",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 8,
+   "src": []
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:164$92",
+   "id": 59,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:164$92|A|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:164.42-164.73"
+   ]
+  },
+  {
+   "cell": "$procdff$535",
+   "id": 60,
+   "key": "inv|$procdff$535|Q|3|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:75.46-75.58",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "ctrl_par_odd",
+   "wirebit": 0
+  },
+  {
+   "cell": "$or$rtl/cp_uart.sv:276$130",
+   "id": 61,
+   "key": "const0|$or$rtl/cp_uart.sv:276$130|B|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:188.15-188.22",
+    "rtl/cp_uart.sv:276.19-276.50"
+   ],
+   "wire": "irq_set",
+   "wirebit": 0
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$procmux$253",
+   "id": 62,
+   "key": "const1|$flatten\\u_rx_fifo.$procmux$253|S|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "S",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:56.11-56.15",
+    "rtl/cp_fifo.sv:56.7-59.10"
+   ]
+  },
+  {
+   "cell": "$auto$memory_map.cc:97:addr_decode$680",
+   "id": 63,
+   "key": "const0|$auto$memory_map.cc:97:addr_decode$680|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$procdff$548",
+   "id": 64,
+   "key": "const0|$procdff$548|Q|2|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:57.15-57.21",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "rx_div",
+   "wirebit": 2
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:213$120",
+   "id": 65,
+   "key": "inv|$eq$rtl/cp_uart.sv:213$120|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:213.26-213.42"
+   ],
+   "wire": "status_word",
+   "wirebit": 3
+  },
+  {
+   "cell": "$procmux$430",
+   "id": 66,
+   "key": "inv|$procmux$430|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:266.11-266.18",
+    "rtl/cp_uart.sv:266.7-273.10"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:162$85",
+   "id": 67,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:162$85|A|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:162.27-162.57"
+   ]
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem$rdmux[0][0][0]$744",
+   "ctrlbit": 0,
+   "id": 68,
+   "key": "cnot1|$memory\\u_tx_fifo.mem$rdmux[0][0][0]$744|Y|1|0",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:21.30-21.35"
+   ],
+   "wire": "u_tx_fifo.rdata",
+   "wirebit": 1
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:161$83",
+   "id": 69,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:161$83|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:159.23-159.32",
+    "rtl/cp_uart.sv:161.27-161.58"
+   ],
+   "wire": "rx_sample",
+   "wirebit": 0
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procdff$556",
+   "ctrlbit": 0,
+   "id": 70,
+   "key": "cnot0|$flatten\\u_tx_fifo.$procdff$556|Q|1|0",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:33.21-33.25",
+    "rtl/cp_fifo.sv:46.3-69.6"
+   ],
+   "wire": "u_tx_fifo.rptr",
+   "wirebit": 1
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:219$122",
+   "ctrlbit": 3,
+   "id": 71,
+   "key": "cnot1|$ternary$rtl/cp_uart.sv:219$122|Y|5|3",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:219.24-219.69"
+   ],
+   "wire": "rxdata_word",
+   "wirebit": 5
+  },
+  {
+   "cell": "$le$rtl/cp_uart.sv:329$137",
+   "id": 72,
+   "key": "const1|$le$rtl/cp_uart.sv:329$137|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:329.37-329.52"
+   ]
+  },
+  {
+   "cell": "$add$rtl/cp_uart.sv:140$72",
+   "id": 73,
+   "key": "const1|$add$rtl/cp_uart.sv:140$72|Y|2|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:138.16-138.33",
+    "rtl/cp_uart.sv:140.30-140.81"
+   ],
+   "wire": "tx_last_slot_load",
+   "wirebit": 2
+  },
+  {
+   "cell": "$procdff$545",
+   "id": 74,
+   "key": "inv|$procdff$545|Q|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:55.15-55.17",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "s1",
+   "wirebit": 0
+  },
+  {
+   "cell": "$procdff$552",
+   "id": 75,
+   "key": "const1|$procdff$552|Q|6|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 6,
+   "src": [
+    "rtl/cp_uart.sv:62.15-62.23",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "rx_timer",
+   "wirebit": 6
+  },
+  {
+   "cell": "$procmux$411",
+   "ctrlbit": 3,
+   "id": 76,
+   "key": "cnot1|$procmux$411|B|4|3",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 4,
+   "src": [
+    "rtl/cp_uart.sv:269.48-269.48",
+    "rtl/cp_uart.sv:267.9-272.16"
+   ]
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$add$rtl/cp_fifo.sv:58$199",
+   "id": 77,
+   "key": "const1|$flatten\\u_tx_fifo.$add$rtl/cp_fifo.sv:58$199|A|1|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:58.22-58.33"
+   ]
+  },
+  {
+   "cell": "$procmux$376",
+   "id": 78,
+   "key": "const1|$procmux$376|Y|3|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:293.20-293.31",
+    "rtl/cp_uart.sv:293.16-300.10"
+   ]
+  },
+  {
+   "cell": "$sub$rtl/cp_uart.sv:183$106",
+   "id": 79,
+   "key": "const1|$sub$rtl/cp_uart.sv:183$106|A|1|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:183.27-183.55"
+   ]
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procdff$557",
+   "id": 80,
+   "key": "const0|$flatten\\u_tx_fifo.$procdff$557|Q|1|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:34.21-34.25",
+    "rtl/cp_fifo.sv:46.3-69.6"
+   ],
+   "wire": "u_tx_fifo.wptr",
+   "wirebit": 1
+  },
+  {
+   "cell": "$sub$rtl/cp_uart.sv:340$139",
+   "id": 81,
+   "key": "const0|$sub$rtl/cp_uart.sv:340$139|Y|2|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:340.21-340.36"
+   ]
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$sub$rtl/cp_fifo.sv:65$171",
+   "id": 82,
+   "key": "const0|$flatten\\u_rx_fifo.$sub$rtl/cp_fifo.sv:65$171|B|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:65.27-65.39"
+   ]
+  },
+  {
+   "cell": "$ne$rtl/cp_uart.sv:219$121",
+   "ctrlbit": 1,
+   "id": 83,
+   "key": "cnot0|$ne$rtl/cp_uart.sv:219$121|A|0|1",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:219.25-219.41"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:164$95",
+   "id": 84,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:164$95|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:159.66-159.78",
+    "rtl/cp_uart.sv:164.27-165.61"
+   ],
+   "wire": "rx_stop_edge",
+   "wirebit": 0
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$wren[1][4][0]$670",
+   "id": 85,
+   "key": "const1|$memory\\u_rx_fifo.mem$wren[1][4][0]$670|A|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem$rdmux[0][0][0]$744",
+   "id": 86,
+   "key": "const0|$memory\\u_tx_fifo.mem$rdmux[0][0][0]$744|Y|5|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_fifo.sv:21.30-21.35"
+   ],
+   "wire": "u_tx_fifo.rdata",
+   "wirebit": 5
+  },
+  {
+   "cell": "$procdff$537",
+   "ctrlbit": 2,
+   "id": 87,
+   "key": "cnot1|$procdff$537|Q|0|2",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:42.15-42.21",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "irq_en",
+   "wirebit": 0
+  },
+  {
+   "cell": "$add$rtl/cp_uart.sv:140$71",
+   "id": 88,
+   "key": "const1|$add$rtl/cp_uart.sv:140$71|Y|2|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:140.30-140.58"
+   ]
+  },
+  {
+   "cell": "$procdff$549",
+   "id": 89,
+   "key": "const0|$procdff$549|Q|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:58.15-58.24",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "rx_par_en",
+   "wirebit": 0
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:164$90",
+   "id": 90,
+   "key": "inv|$eq$rtl/cp_uart.sv:164$90|B|1|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:164.43-164.58"
+   ]
+  },
+  {
+   "cell": "$sub$rtl/cp_uart.sv:183$106",
+   "ctrlbit": 6,
+   "id": 91,
+   "key": "cnot1|$sub$rtl/cp_uart.sv:183$106|Y|1|6",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:181.15-181.29",
+    "rtl/cp_uart.sv:183.27-183.55"
+   ],
+   "wire": "rx_half_minus1",
+   "wirebit": 1
+  },
+  {
+   "cell": "$procmux$273",
+   "id": 92,
+   "key": "const1|$procmux$273|B|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:168.9-168.20",
+    "rtl/cp_uart.sv:335.15-335.29",
+    "rtl/cp_uart.sv:335.11-337.14"
+   ],
+   "wire": "rx_perr_now",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:192$111",
+   "id": 93,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:192$111|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:188.15-188.22",
+    "rtl/cp_uart.sv:192.23-192.46"
+   ],
+   "wire": "irq_set",
+   "wirebit": 3
+  },
+  {
+   "cell": "$add$rtl/cp_uart.sv:140$71",
+   "id": 94,
+   "key": "const0|$add$rtl/cp_uart.sv:140$71|B|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:140.30-140.58"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:173$102",
+   "id": 95,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:173$102|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:18.30-18.34",
+    "rtl/cp_uart.sv:173.24-173.58"
+   ],
+   "wire": "u_rx_fifo.push",
+   "wirebit": 0
+  },
+  {
+   "cell": "$procdff$535",
+   "id": 96,
+   "key": "const0|$procdff$535|Q|4|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 4,
+   "src": [
+    "rtl/cp_uart.sv:75.60-75.73",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "ctrl_loopback",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:189$110",
+   "id": 97,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:189$110|A|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:189.23-189.63"
+   ]
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procmux$483_CMP0",
+   "id": 98,
+   "key": "const1|$flatten\\u_tx_fifo.$procmux$483_CMP0|A|1|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:64.40-64.40",
+    "rtl/cp_fifo.sv:63.7-67.14"
+   ]
+  },
+  {
+   "cell": "$procmux$310",
+   "id": 99,
+   "key": "const1|$procmux$310|A|1|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:181.15-181.29",
+    "rtl/cp_uart.sv:313.13-313.25",
+    "rtl/cp_uart.sv:313.9-321.12"
+   ],
+   "wire": "rx_half_minus1",
+   "wirebit": 1
+  },
+  {
+   "cell": "$procdff$542",
+   "ctrlbit": 2,
+   "id": 100,
+   "key": "cnot1|$procdff$542|Q|3|2",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:50.16-50.22",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_div",
+   "wirebit": 3
+  },
+  {
+   "cell": "$logic_not$rtl/cp_uart.sv:99$35",
+   "id": 101,
+   "key": "inv|$logic_not$rtl/cp_uart.sv:99$35|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:99.21-99.33"
+   ]
+  },
+  {
+   "cell": "$add$rtl/cp_uart.sv:298$132",
+   "ctrlbit": 3,
+   "id": 102,
+   "key": "cnot0|$add$rtl/cp_uart.sv:298$132|A|0|3",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:298.52-298.67"
+   ]
+  },
+  {
+   "cell": "$procmux$300",
+   "ctrlbit": 6,
+   "id": 103,
+   "key": "cnot1|$procmux$300|Y|7|6",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 7,
+   "src": [
+    "rtl/cp_uart.sv:339.20-339.29",
+    "rtl/cp_uart.sv:339.16-341.10"
+   ]
+  },
+  {
+   "cell": "$ne$rtl/cp_uart.sv:113$51",
+   "ctrlbit": 2,
+   "id": 104,
+   "key": "cnot1|$ne$rtl/cp_uart.sv:113$51|A|1|2",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:113.33-113.49"
+   ]
+  },
+  {
+   "cell": "$shiftx$rtl/cp_uart.sv:149$76",
+   "ctrlbit": 8,
+   "id": 105,
+   "key": "cnot1|$shiftx$rtl/cp_uart.sv:149$76|A|0|8",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:149.37-149.51"
+   ]
+  },
+  {
+   "cell": "$procmux$336",
+   "id": 106,
+   "key": "const1|$procmux$336|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:241.9-241.17",
+    "rtl/cp_uart.sv:241.5-342.8"
+   ]
+  },
+  {
+   "cell": "$procdff$534",
+   "id": 107,
+   "key": "const0|$procdff$534|Q|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:21.25-21.28",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "txd",
+   "wirebit": 0
+  },
+  {
+   "cell": "$procmux$287",
+   "id": 108,
+   "key": "const0|$procmux$287|B|3|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:329.15-329.53",
+    "rtl/cp_uart.sv:329.11-334.14"
+   ]
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:165$93",
+   "id": 109,
+   "key": "inv|$eq$rtl/cp_uart.sv:165$93|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:165.43-165.59"
+   ]
+  },
+  {
+   "cell": "$procdff$536",
+   "ctrlbit": 6,
+   "id": 110,
+   "key": "cnot0|$procdff$536|Q|2|6",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:41.15-41.23",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "baud_div",
+   "wirebit": 2
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$wrmux[2][0][0]$678",
+   "ctrlbit": 0,
+   "id": 111,
+   "key": "cnot1|$memory\\u_rx_fifo.mem$wrmux[2][0][0]$678|A|2|0",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 2,
+   "src": []
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:172$100",
+   "id": 112,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:172$100|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:19.30-19.35",
+    "rtl/cp_uart.sv:172.24-172.43"
+   ],
+   "wire": "u_rx_fifo.wdata",
+   "wirebit": 9
+  },
+  {
+   "cell": "$procdff$537",
+   "id": 113,
+   "key": "inv|$procdff$537|Q|5|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:42.15-42.21",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "irq_en",
+   "wirebit": 5
+  },
+  {
+   "cell": "$procmux$462_CMP0",
+   "ctrlbit": 2,
+   "id": 114,
+   "key": "cnot0|$procmux$462_CMP0|A|3|2",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:89.17-89.17",
+    "rtl/cp_uart.sv:89.5-93.12"
+   ]
+  },
+  {
+   "cell": "$procdff$546",
+   "id": 115,
+   "key": "inv|$procdff$546|Q|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:55.19-55.21",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "s2",
+   "wirebit": 0
+  },
+  {
+   "cell": "$xor$rtl/cp_uart.sv:135$69",
+   "id": 116,
+   "key": "const1|$xor$rtl/cp_uart.sv:135$69|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:134.9-134.19",
+    "rtl/cp_uart.sv:135.23-135.48"
+   ],
+   "wire": "tx_par_bit",
+   "wirebit": 0
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$procmux$216",
+   "id": 117,
+   "key": "const0|$flatten\\u_rx_fifo.$procmux$216|Y|1|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:56.11-56.15",
+    "rtl/cp_fifo.sv:56.7-59.10"
+   ]
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem$wrmux[3][4][0]$847",
+   "ctrlbit": 7,
+   "id": 118,
+   "key": "cnot1|$memory\\u_tx_fifo.mem$wrmux[3][4][0]$847|A|0|7",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$procdff$541",
+   "ctrlbit": 3,
+   "id": 119,
+   "key": "cnot1|$procdff$541|Q|0|3",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:49.16-49.28",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_last_slot",
+   "wirebit": 0
+  },
+  {
+   "cell": "$procdff$542",
+   "ctrlbit": 1,
+   "id": 120,
+   "key": "cnot1|$procdff$542|Q|7|1",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 7,
+   "src": [
+    "rtl/cp_uart.sv:50.16-50.22",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_div",
+   "wirebit": 7
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procmux$484_CMP0",
+   "id": 121,
+   "key": "const0|$flatten\\u_tx_fifo.$procmux$484_CMP0|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:63.25-63.25",
+    "rtl/cp_fifo.sv:63.7-67.14"
+   ]
+  },
+  {
+   "cell": "$procmux$391",
+   "id": 122,
+   "key": "const0|$procmux$391|B|1|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:138.16-138.33",
+    "rtl/cp_uart.sv:285.11-285.17",
+    "rtl/cp_uart.sv:285.7-300.10"
+   ],
+   "wire": "tx_last_slot_load",
+   "wirebit": 1
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:157$77",
+   "id": 123,
+   "key": "inv|$ternary$rtl/cp_uart.sv:157$77|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:156.9-156.14",
+    "rtl/cp_uart.sv:157.18-157.43"
+   ],
+   "wire": "rx_in",
+   "wirebit": 0
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:162$84",
+   "id": 124,
+   "key": "const0|$eq$rtl/cp_uart.sv:162$84|A|1|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:162.41-162.56"
+   ]
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem[1]$585",
+   "id": 125,
+   "key": "const0|$memory\\u_rx_fifo.mem[1]$585|Q|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [],
+   "wire": "u_rx_fifo.mem[1]",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:163$88",
+   "id": 126,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:163$88|A|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:163.27-163.57"
+   ]
+  },
+  {
+   "cell": "$procmux$461",
+   "id": 127,
+   "key": "inv|$procmux$461|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:87.9-87.20",
+    "rtl/cp_uart.sv:89.17-89.17",
+    "rtl/cp_uart.sv:89.5-93.12"
+   ],
+   "wire": "addr_mapped",
+   "wirebit": 0
+  },
+  {
+   "cell": "$shiftx$rtl/cp_uart.sv:149$76",
+   "id": 128,
+   "key": "const0|$shiftx$rtl/cp_uart.sv:149$76|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:146.16-146.27",
+    "rtl/cp_uart.sv:149.37-149.51"
+   ],
+   "wire": "tx_next_bit",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:173$102",
+   "id": 129,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:173$102|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:18.30-18.34",
+    "rtl/cp_uart.sv:173.24-173.58"
+   ],
+   "wire": "u_rx_fifo.push",
+   "wirebit": 0
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:219$122",
+   "ctrlbit": 9,
+   "id": 130,
+   "key": "cnot0|$ternary$rtl/cp_uart.sv:219$122|Y|1|9",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:219.24-219.69"
+   ],
+   "wire": "rxdata_word",
+   "wirebit": 1
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:106$47",
+   "id": 131,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:106$47|B|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:13.25-13.32",
+    "rtl/cp_uart.sv:106.20-106.35"
+   ],
+   "wire": "penable",
+   "wirebit": 0
+  },
+  {
+   "cell": "$reduce_or$rtl/cp_uart.sv:199$116",
+   "id": 132,
+   "key": "inv|$reduce_or$rtl/cp_uart.sv:199$116|A|2|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:199.16-199.36"
+   ]
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$add$rtl/cp_fifo.sv:58$168",
+   "ctrlbit": 0,
+   "id": 133,
+   "key": "cnot1|$flatten\\u_rx_fifo.$add$rtl/cp_fifo.sv:58$168|Y|1|0",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:58.22-58.33"
+   ]
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$add$rtl/cp_fifo.sv:64$170",
+   "id": 134,
+   "key": "const0|$flatten\\u_rx_fifo.$add$rtl/cp_fifo.sv:64$170|Y|1|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_fifo.sv:64.27-64.39"
+   ]
+  },
+  {
+   "cell": "$procdff$548",
+   "id": 135,
+   "key": "inv|$procdff$548|Q|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:57.15-57.21",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "rx_div",
+   "wirebit": 0
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procmux$518",
+   "id": 136,
+   "key": "const0|$flatten\\u_tx_fifo.$procmux$518|A|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:60.11-60.14",
+    "rtl/cp_fifo.sv:60.7-62.10"
+   ]
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem$wrmux[3][4][0]$847",
+   "ctrlbit": 4,
+   "id": 137,
+   "key": "cnot1|$memory\\u_tx_fifo.mem$wrmux[3][4][0]$847|Y|5|4",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 5,
+   "src": []
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$procdff$524",
+   "id": 138,
+   "key": "const1|$flatten\\u_rx_fifo.$procdff$524|Q|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:33.21-33.25",
+    "rtl/cp_fifo.sv:46.3-69.6"
+   ],
+   "wire": "u_rx_fifo.rptr",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:129$67",
+   "id": 139,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:129$67|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:20.30-20.33",
+    "rtl/cp_uart.sv:129.24-129.68"
+   ],
+   "wire": "u_tx_fifo.pop",
+   "wirebit": 0
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem[3]$589",
+   "id": 140,
+   "key": "inv|$memory\\u_rx_fifo.mem[3]$589|Q|7|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 7,
+   "src": [],
+   "wire": "u_rx_fifo.mem[3]",
+   "wirebit": 7
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:127$60",
+   "id": 141,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:127$60|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:127.24-127.62"
+   ]
+  },
+  {
+   "cell": "$procdff$553",
+   "id": 142,
+   "key": "const0|$procdff$553|Q|3|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_fifo.sv:19.30-19.35",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "u_rx_fifo.wdata",
+   "wirebit": 3
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:139$70",
+   "id": 143,
+   "key": "const0|$ternary$rtl/cp_uart.sv:139$70|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:139.39-139.70"
+   ],
+   "wire": "tx_frame_load",
+   "wirebit": 9
+  },
+  {
+   "cell": "$flatten\\u_rx_fifo.$procmux$223_CMP0",
+   "id": 144,
+   "key": "const0|$flatten\\u_rx_fifo.$procmux$223_CMP0|A|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:64.40-64.40",
+    "rtl/cp_fifo.sv:63.7-67.14"
+   ]
+  },
+  {
+   "cell": "$procmux$458",
+   "ctrlbit": 1,
+   "id": 145,
+   "key": "cnot1|$procmux$458|Y|12|1",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 12,
+   "src": [
+    "rtl/cp_uart.sv:17.25-17.31",
+    "rtl/cp_uart.sv:223.9-223.24",
+    "rtl/cp_uart.sv:223.5-234.8"
+   ],
+   "wire": "prdata",
+   "wirebit": 12
+  },
+  {
+   "cell": "$logic_or$rtl/cp_uart.sv:99$40",
+   "id": 146,
+   "key": "inv|$logic_or$rtl/cp_uart.sv:99$40|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:99.21-100.83"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:129$65",
+   "id": 147,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:129$65|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:129.24-129.46"
+   ]
+  },
+  {
+   "cell": "$reduce_xor$rtl/cp_uart.sv:169$96",
+   "id": 148,
+   "key": "inv|$reduce_xor$rtl/cp_uart.sv:169$96|A|6|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 6,
+   "src": [
+    "rtl/cp_uart.sv:169.25-169.33"
+   ]
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:127$59",
+   "ctrlbit": 1,
+   "id": 149,
+   "key": "cnot1|$eq$rtl/cp_uart.sv:127$59|A|2|1",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:127.38-127.61"
+   ]
+  },
+  {
+   "cell": "$procdff$535",
+   "ctrlbit": 4,
+   "id": 150,
+   "key": "cnot1|$procdff$535|Q|3|4",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:75.46-75.58",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "ctrl_par_odd",
+   "wirebit": 0
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem[0]$583",
+   "id": 151,
+   "key": "const0|$memory\\u_rx_fifo.mem[0]$583|Q|2|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 2,
+   "src": [],
+   "wire": "u_rx_fifo.mem[0]",
+   "wirebit": 2
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem[2]$587",
+   "ctrlbit": 5,
+   "id": 152,
+   "key": "cnot0|$memory\\u_rx_fifo.mem[2]$587|Q|2|5",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 2,
+   "src": [],
+   "wire": "u_rx_fifo.mem[2]",
+   "wirebit": 2
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:106$47",
+   "id": 153,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:106$47|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:13.25-13.32",
+    "rtl/cp_uart.sv:106.20-106.35"
+   ],
+   "wire": "penable",
+   "wirebit": 0
+  },
+  {
+   "cell": "$flatten\\u_tx_fifo.$procmux$483_CMP0",
+   "id": 154,
+   "key": "const0|$flatten\\u_tx_fifo.$procmux$483_CMP0|A|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:64.40-64.40",
+    "rtl/cp_fifo.sv:63.7-67.14"
+   ]
+  },
+  {
+   "cell": "$and$rtl/cp_uart.sv:199$115",
+   "ctrlbit": 0,
+   "id": 155,
+   "key": "cnot1|$and$rtl/cp_uart.sv:199$115|Y|2|0",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:199.18-199.35"
+   ]
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$wren[3][0][0]$708",
+   "id": 156,
+   "key": "const0|$memory\\u_rx_fifo.mem$wren[3][0][0]$708|B|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:161$82",
+   "id": 157,
+   "key": "inv|$eq$rtl/cp_uart.sv:161$82|A|3|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:161.41-161.57"
+   ]
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:147$75",
+   "id": 158,
+   "key": "const0|$ternary$rtl/cp_uart.sv:147$75|B|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:147.25-147.74"
+   ]
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:298$131",
+   "id": 159,
+   "key": "const1|$eq$rtl/cp_uart.sv:298$131|B|5|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:298.22-298.40"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:113$52",
+   "id": 160,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:113$52|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_fifo.sv:18.30-18.34",
+    "rtl/cp_uart.sv:113.23-113.50"
+   ],
+   "wire": "u_tx_fifo.push",
+   "wirebit": 0
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem$wrmux[3][2][0]$837",
+   "ctrlbit": 3,
+   "id": 161,
+   "key": "cnot1|$memory\\u_tx_fifo.mem$wrmux[3][2][0]$837|A|4|3",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 4,
+   "src": []
+  },
+  {
+   "cell": "$procmux$385",
+   "id": 162,
+   "key": "const1|$procmux$385|A|7|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 7,
+   "src": [
+    "rtl/cp_uart.sv:285.11-285.17",
+    "rtl/cp_uart.sv:285.7-300.10"
+   ]
+  },
+  {
+   "cell": "$and$rtl/cp_uart.sv:276$129",
+   "ctrlbit": 4,
+   "id": 163,
+   "key": "cnot1|$and$rtl/cp_uart.sv:276$129|B|1|4",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:276.20-276.39"
+   ]
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$rdmux[0][1][1]$597",
+   "ctrlbit": 5,
+   "id": 164,
+   "key": "cnot0|$memory\\u_rx_fifo.mem$rdmux[0][1][1]$597|B|4|5",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 4,
+   "src": []
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:173$102",
+   "id": 165,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:173$102|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:173.24-173.58"
+   ]
+  },
+  {
+   "cell": "$and$rtl/cp_uart.sv:276$129",
+   "id": 166,
+   "key": "const0|$and$rtl/cp_uart.sv:276$129|Y|5|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:276.20-276.39"
+   ]
+  },
+  {
+   "cell": "$procdff$539",
+   "id": 167,
+   "key": "inv|$procdff$539|Q|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:46.16-46.25",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_active",
+   "wirebit": 0
+  },
+  {
+   "cell": "$xor$rtl/cp_uart.sv:169$98",
+   "id": 168,
+   "key": "inv|$xor$rtl/cp_uart.sv:169$98|Y|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:168.9-168.20",
+    "rtl/cp_uart.sv:169.24-169.52"
+   ],
+   "wire": "rx_perr_now",
+   "wirebit": 0
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:182$105",
+   "id": 169,
+   "key": "const1|$eq$rtl/cp_uart.sv:182$105|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:180.15-180.27",
+    "rtl/cp_uart.sv:182.28-182.49"
+   ],
+   "wire": "rx_half_zero",
+   "wirebit": 0
+  },
+  {
+   "cell": "$procmux$428",
+   "id": 170,
+   "key": "const0|$procmux$428|B|1|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:267.21-267.21",
+    "rtl/cp_uart.sv:267.9-272.16"
+   ]
+  },
+  {
+   "cell": "$procdff$536",
+   "ctrlbit": 3,
+   "id": 171,
+   "key": "cnot0|$procdff$536|Q|7|3",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 7,
+   "src": [
+    "rtl/cp_uart.sv:41.15-41.23",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "baud_div",
+   "wirebit": 7
+  },
+  {
+   "cell": "$not$rtl/cp_uart.sv:276$128",
+   "id": 172,
+   "key": "const0|$not$rtl/cp_uart.sv:276$128|Y|3|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:276.31-276.39"
+   ]
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:189$107",
+   "id": 173,
+   "key": "const1|$eq$rtl/cp_uart.sv:189$107|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:189.24-189.40"
+   ]
+  },
+  {
+   "cell": "$procdff$543",
+   "ctrlbit": 1,
+   "id": 174,
+   "key": "cnot0|$procdff$543|Q|0|1",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:51.16-51.23",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_slot",
+   "wirebit": 0
+  },
+  {
+   "cell": "$ternary$rtl/cp_uart.sv:147$75",
+   "id": 175,
+   "key": "inv|$ternary$rtl/cp_uart.sv:147$75|Y|2|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:144.16-144.28",
+    "rtl/cp_uart.sv:147.25-147.74"
+   ],
+   "wire": "tx_slot_next",
+   "wirebit": 2
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:160$81",
+   "id": 176,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:160$81|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:159.9-159.21",
+    "rtl/cp_uart.sv:160.27-160.58"
+   ],
+   "wire": "rx_start_det",
+   "wirebit": 0
+  },
+  {
+   "cell": "$add$rtl/cp_uart.sv:298$132",
+   "id": 177,
+   "key": "inv|$add$rtl/cp_uart.sv:298$132|A|4|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 4,
+   "src": [
+    "rtl/cp_uart.sv:298.52-298.67"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:114$54",
+   "id": 178,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:114$54|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:114.23-114.50"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:163$89",
+   "id": 179,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:163$89|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:159.50-159.64",
+    "rtl/cp_uart.sv:163.27-163.70"
+   ],
+   "wire": "rx_parity_edge",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:106$48",
+   "id": 180,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:106$48|B|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:106.20-106.46"
+   ]
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem[1]$738",
+   "id": 181,
+   "key": "inv|$memory\\u_tx_fifo.mem[1]$738|Q|1|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 1,
+   "src": [],
+   "wire": "u_tx_fifo.mem[1]",
+   "wirebit": 1
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:161$83",
+   "id": 182,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:161$83|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:159.23-159.32",
+    "rtl/cp_uart.sv:161.27-161.58"
+   ],
+   "wire": "rx_sample",
+   "wirebit": 0
+  },
+  {
+   "cell": "$auto$memory_map.cc:92:addr_decode$769",
+   "id": 183,
+   "key": "inv|$auto$memory_map.cc:92:addr_decode$769|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:101$43",
+   "id": 184,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:101$43|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:96.18-96.26",
+    "rtl/cp_uart.sv:101.21-101.48"
+   ],
+   "wire": "acc_done",
+   "wirebit": 0
+  },
+  {
+   "cell": "$procdff$541",
+   "id": 185,
+   "key": "inv|$procdff$541|Q|2|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:49.16-49.28",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "tx_last_slot",
+   "wirebit": 2
+  },
+  {
+   "cell": "$procmux$428",
+   "id": 186,
+   "key": "inv|$procmux$428|B|5|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:267.21-267.21",
+    "rtl/cp_uart.sv:267.9-272.16"
+   ]
+  },
+  {
+   "cell": "$memory\\u_tx_fifo.mem$wren[2][3][0]$815",
+   "id": 187,
+   "key": "inv|$memory\\u_tx_fifo.mem$wren[2][3][0]$815|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$procdff$551",
+   "id": 188,
+   "key": "const1|$procdff$551|Q|2|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 2,
+   "src": [
+    "rtl/cp_uart.sv:60.15-60.22",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "rx_slot",
+   "wirebit": 2
+  },
+  {
+   "cell": "$procmux$458",
+   "ctrlbit": 10,
+   "id": 189,
+   "key": "cnot0|$procmux$458|Y|11|10",
+   "mode": "cnot0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 11,
+   "src": [
+    "rtl/cp_uart.sv:17.25-17.31",
+    "rtl/cp_uart.sv:223.9-223.24",
+    "rtl/cp_uart.sv:223.5-234.8"
+   ],
+   "wire": "prdata",
+   "wirebit": 11
+  },
+  {
+   "cell": "$procdff$535",
+   "ctrlbit": 4,
+   "id": 190,
+   "key": "cnot1|$procdff$535|Q|1|4",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "Q",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:75.21-75.31",
+    "rtl/cp_uart.sv:240.3-343.6"
+   ],
+   "wire": "ctrl_rx_en",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_or$rtl/cp_uart.sv:128$64",
+   "id": 191,
+   "key": "const1|$logic_or$rtl/cp_uart.sv:128$64|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:126.22-126.30",
+    "rtl/cp_uart.sv:128.24-128.49"
+   ],
+   "wire": "tx_avail",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_not$rtl/cp_uart.sv:128$63",
+   "id": 192,
+   "key": "const1|$logic_not$rtl/cp_uart.sv:128$63|Y|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:128.24-128.34"
+   ]
+  },
+  {
+   "cell": "$or$rtl/cp_uart.sv:276$130",
+   "id": 193,
+   "key": "const1|$or$rtl/cp_uart.sv:276$130|B|5|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 5,
+   "src": [
+    "rtl/cp_uart.sv:111.16-111.26",
+    "rtl/cp_uart.sv:276.19-276.50"
+   ],
+   "wire": "tx_ovf_set",
+   "wirebit": 0
+  },
+  {
+   "cell": "$or$rtl/cp_uart.sv:276$130",
+   "id": 194,
+   "key": "const0|$or$rtl/cp_uart.sv:276$130|B|3|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 3,
+   "src": [
+    "rtl/cp_uart.sv:188.15-188.22",
+    "rtl/cp_uart.sv:276.19-276.50"
+   ],
+   "wire": "irq_set",
+   "wirebit": 3
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:197$113",
+   "id": 195,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:197$113|B|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:197.21-197.56"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:127$62",
+   "id": 196,
+   "key": "const0|$logic_and$rtl/cp_uart.sv:127$62|Y|0|",
+   "mode": "const0",
+   "module": "cp_uart",
+   "port": "Y",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:126.9-126.20",
+    "rtl/cp_uart.sv:127.24-127.86"
+   ],
+   "wire": "tx_end_edge",
+   "wirebit": 0
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:117$56",
+   "id": 197,
+   "key": "inv|$logic_and$rtl/cp_uart.sv:117$56|A|0|",
+   "mode": "inv",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:96.37-96.44",
+    "rtl/cp_uart.sv:117.19-117.52"
+   ],
+   "wire": "rd_done",
+   "wirebit": 0
+  },
+  {
+   "cell": "$memory\\u_rx_fifo.mem$wren[0][2][0]$618",
+   "id": 198,
+   "key": "const1|$memory\\u_rx_fifo.mem$wren[0][2][0]$618|B|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": []
+  },
+  {
+   "cell": "$eq$rtl/cp_uart.sv:214$119",
+   "ctrlbit": 2,
+   "id": 199,
+   "key": "cnot1|$eq$rtl/cp_uart.sv:214$119|A|1|2",
+   "mode": "cnot1",
+   "module": "cp_uart",
+   "port": "A",
+   "portbit": 1,
+   "src": [
+    "rtl/cp_uart.sv:214.26-214.42"
+   ]
+  },
+  {
+   "cell": "$logic_and$rtl/cp_uart.sv:103$46",
+   "id": 200,
+   "key": "const1|$logic_and$rtl/cp_uart.sv:103$46|B|0|",
+   "mode": "const1",
+   "module": "cp_uart",
+   "port": "B",
+   "portbit": 0,
+   "src": [
+    "rtl/cp_uart.sv:103.21-103.40"
+   ]
+  }
+ ],
+ "netlist_sha256": "39b4ad9071cd40af1d06009a7b4873fbf28aed53dd8209dbb4dadbd99d14838e",
+ "prep": "prep -top cp_uart -flatten; memory_map; pmuxtree; opt_clean",
+ "requested": 200,
+ "rtl_sha256": "638045ffa5ed320423119b287e7507afe6092e8ee0a5a94e75085c57aac062e2",
+ "sample": "dev",
+ "seed": 1,
+ "yosys": "Yosys 0.69 (git sha1 9f75ca1f9,"
+}

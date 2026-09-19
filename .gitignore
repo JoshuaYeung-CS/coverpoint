@@ -1,0 +1,14 @@
+.venv/
+.cenv/
+.conda-pkgs/
+.cache/
+build/
+scratch/
+sim_build/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.vcd
+*.fst
+results.xml
+.tools/
