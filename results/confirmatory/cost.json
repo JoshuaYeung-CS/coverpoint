@@ -1,0 +1,10 @@
+{
+ "directed_wall_s": 129.2,
+ "equivalence_max_proof_s": 2.86,
+ "equivalence_wall_s": 790.9,
+ "formal_solver_s": 3779.9,
+ "formal_wall_s": 664.8,
+ "random_wall_s": 1065.9,
+ "smoke_wall_s": 30.4,
+ "total_wall_s": 2712.2
+}
