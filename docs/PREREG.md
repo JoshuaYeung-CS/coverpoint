@@ -136,7 +136,6 @@ cycle 7,412 and cycle 76,926.
    check that the confirmatory netlist behaves like the dev one, not an independent
    prediction. It is listed so that the closure curve has a stated expectation.)
 6. The single smoke test kills **between 40% and 55%** of scored mutants.
-
 7. The formal arm kills **no mutant that every simulation arm misses** (dev: none). If it
    does, those mutants are the most interesting line in the result and are listed.
 

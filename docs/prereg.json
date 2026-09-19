@@ -1,5 +1,5 @@
 {
- "status": "draft",
+ "status": "frozen",
  "samples": {
   "dev": {"seed": 1, "count": 200},
   "confirmatory": {"seed": 20260919, "count": 1000}
