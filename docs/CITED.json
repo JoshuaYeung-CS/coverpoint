@@ -1,0 +1,558 @@
+[
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "mutants"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md",
+   "docs/RESUME-BLOCK.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "equivalent"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "scored"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "smoke",
+   "killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "smoke",
+   "score"
+  ],
+  "format": "{:.1f}%",
+  "scale": 100,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "directed",
+   "killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "directed",
+   "score"
+  ],
+  "format": "{:.1f}%",
+  "scale": 100,
+  "docs": [
+   "README.md",
+   "DEFENSE.md",
+   "docs/RESUME-BLOCK.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "directed",
+   "survived"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "directed",
+   "cycles"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md",
+   "docs/RESUME-BLOCK.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "random_equal_cycles",
+   "mean_killed"
+  ],
+  "format": "{:.1f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "random_equal_cycles",
+   "mean_score"
+  ],
+  "format": "{:.1f}%",
+  "scale": 100,
+  "docs": [
+   "README.md",
+   "DEFENSE.md",
+   "docs/RESUME-BLOCK.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "random_equal_cycles",
+   "min_killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "random_equal_cycles",
+   "max_killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "random_equal_cycles",
+   "union",
+   "killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "random_long",
+   "mean_killed"
+  ],
+  "format": "{:.1f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "random_long",
+   "mean_score"
+  ],
+  "format": "{:.1f}%",
+  "scale": 100,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "random_long",
+   "cycles"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "formal",
+   "killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "formal",
+   "score"
+  ],
+  "format": "{:.1f}%",
+  "scale": 100,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "formal",
+   "survived"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "formal",
+   "median_frame_of_kill"
+  ],
+  "format": "median counterexample {}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "formal",
+   "deepest_kill_frame"
+  ],
+  "format": "deepest {}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "any_simulation",
+   "killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "any_simulation",
+   "score"
+  ],
+  "format": "{:.1f}%",
+  "scale": 100,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "anything",
+   "killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "arms",
+   "anything",
+   "score"
+  ],
+  "format": "{:.1f}%",
+  "scale": 100,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "survivors",
+   "directed"
+  ],
+  "format": "suite's {} survivors",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "formal_vs_simulation",
+   "formal_only"
+  ],
+  "format": "Killed only by the formal arm ({})",
+  "scale": 1,
+  "docs": [
+   "docs/SURVIVORS.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "unresolved_survivors"
+  ],
+  "format": "Survived every arm ({})",
+  "scale": 1,
+  "docs": [
+   "docs/SURVIVORS.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "overlap_with_dev"
+  ],
+  "format": "{} mutants appear in both",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "coverage",
+   "bins"
+  ],
+  "format": "{}-bin",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "curve",
+   "2",
+   "random_mean_killed"
+  ],
+  "format": "{:.1f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "curve",
+   "3",
+   "random_mean_killed"
+  ],
+  "format": "{:.1f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "curve",
+   "2",
+   "directed_killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "curve",
+   "3",
+   "directed_killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "confirmatory/score.json",
+  "path": [
+   "curve",
+   "4",
+   "random_mean_bins"
+  ],
+  "format": "{:.1f}",
+  "scale": 1,
+  "docs": [
+   "README.md"
+  ]
+ },
+ {
+  "file": "dev/score.json",
+  "path": [
+   "arms",
+   "directed",
+   "killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "docs/PREREG.md",
+   "DECISIONS.md"
+  ]
+ },
+ {
+  "file": "dev/score.json",
+  "path": [
+   "arms",
+   "random_equal_cycles",
+   "mean_killed"
+  ],
+  "format": "{:.1f}",
+  "scale": 1,
+  "docs": [
+   "docs/PREREG.md",
+   "DECISIONS.md"
+  ]
+ },
+ {
+  "file": "dev/score.json",
+  "path": [
+   "arms",
+   "formal",
+   "killed"
+  ],
+  "format": "{:,.0f}",
+  "scale": 1,
+  "docs": [
+   "docs/PREREG.md"
+  ]
+ },
+ {
+  "file": "dev/score.json",
+  "path": [
+   "arms",
+   "smoke",
+   "killed"
+  ],
+  "format": "smoke {}",
+  "scale": 1,
+  "docs": [
+   "docs/PREREG.md"
+  ]
+ },
+ {
+  "file": "proof.json",
+  "path": [
+   "with_invariants",
+   "status"
+  ],
+  "format": "{}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ },
+ {
+  "file": "proof.json",
+  "path": [
+   "without_invariants",
+   "status"
+  ],
+  "format": "{}",
+  "scale": 1,
+  "docs": [
+   "README.md",
+   "DEFENSE.md"
+  ]
+ }
+]
