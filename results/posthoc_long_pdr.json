@@ -1,0 +1,25 @@
+{
+ "mutants": [
+  {
+   "id": 87,
+   "verdict": "unresolved",
+   "wall_s": 1218.32
+  },
+  {
+   "id": 486,
+   "verdict": "unresolved",
+   "wall_s": 1216.88
+  },
+  {
+   "id": 525,
+   "verdict": "unresolved",
+   "wall_s": 1218.02
+  },
+  {
+   "id": 857,
+   "verdict": "unresolved",
+   "wall_s": 1314.42
+  }
+ ],
+ "note": "post-hoc: PDR with a 1200-second cap (registered cap: 300) on the four unresolved survivors"
+}

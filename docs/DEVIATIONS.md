@@ -52,8 +52,12 @@ sample.
   analysis. One of them (mutant 495 at divisor 137) was checked by hand and by re-running
   the large-divisor test on it.
 - **A longer proof attempt** on the four mutants that survived everything unresolved: PDR
-  with a one-hour cap instead of the registered 300 seconds
-  (`results/posthoc_long_pdr.json`). Whatever it returns, the four stay in every
+  with a 1,200-second cap instead of the registered 300 (`results/posthoc_long_pdr.json`).
+  An earlier attempt with a one-hour cap was cut off by a restart after about 75 minutes
+  without a verdict and is not recorded. **Outcome: all four are still unresolved** after 1,200
+  seconds of PDR each, which fits the explanation in `docs/SURVIVORS.md`: each is
+  equivalent only on reachable states, so the proof needs an invariant the engine has to
+  find for itself. Whatever it returns, the four stay in every
   denominator in the headline table, as registered.
 - **Re-running single tests on single mutants** (859 and 495 among them) to confirm an
   explanation before writing it down.

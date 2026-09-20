@@ -162,8 +162,10 @@ make reproduce
 Builds the tools, proves the design, redraws both mutant samples, re-runs every arm,
 prints the tables above, and exits non-zero if any outcome differs from the committed
 `results/` or if any number quoted in this README, `DEFENSE.md` or
-`docs/RESUME-BLOCK.md` no longer matches (`docs/CITED.json`). About 70 minutes on an
-eight-core laptop once the tools are built.
+`docs/RESUME-BLOCK.md` no longer matches (`docs/CITED.json`). Between one hour and an hour
+and a half on a twelve-core laptop once the tools are built, depending on what else it is
+doing: the first scoring took 59 minutes, and the full verifying run, on a heavily loaded
+machine, took 76 and exited 0.
 
 ```
 make test       # 300-odd reference-model tests, the pre-registration guards, the cited-number check

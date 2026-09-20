@@ -108,7 +108,7 @@ A mutation that changes no behaviour at the ports, such as a bit that is only ev
 with the value it is stuck at. Counting those as missed punishes every technique equally
 and hides the real gap, so every unkilled mutant goes to a miter against the unmutated
 design, under the same environment assumptions: ABC signal correspondence, a bounded
-search, then PDR. 56 were proved equivalent, each in under three seconds, and leave every
+search, then PDR. 56 were proved equivalent, each within a few seconds, and leave every
 denominator.
 
 Four were neither killed nor proved. They stay in and count against every arm, which is

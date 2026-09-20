@@ -20,7 +20,9 @@ produced.
 - Four mutants survive everything, unresolved; each is argued unobservable from reset.
 - The original design is proved equal to its specification shadow for all time and all
   divisors (k-induction, z3, about 5 s). Without the refinement invariants: UNKNOWN.
-- `make reproduce` re-runs everything and exits 1 on drift; `make test` has 311 tests.
+- `make reproduce` re-runs everything and exits 1 on drift. Verified end to end on
+  2026-09-20: exit 0 after 76 minutes on a heavily loaded machine (59 when first scored).
+  `make test` has 312 tests.
 
 Local-only repository. No remote, nothing pushed or published, no accounts, no spend.
 Commits are Joshua Yeung's. The résumé block in `docs/RESUME-BLOCK.md` is a proposal;
@@ -60,7 +62,9 @@ Commits are Joshua Yeung's. The résumé block in `docs/RESUME-BLOCK.md` is a pr
 - `setundef -zero -init` before `write_aiger` is what makes equivalence cheap. Without it
   `scorr` merges nothing and true equivalents never resolve.
 - Budgets are depths and cycles, never seconds. A seconds budget made the formal score
-  depend on machine load.
+  depend on machine load. One recorded by-product still did (the depth an *unresolved*
+  equivalence check reached before its time cap), which is why `reproduce` compares
+  outcomes through `harness/run.py: stable` (docs/DEVIATIONS.md item 2).
 - The union over random seeds has ten times the budget. The headline is the per-seed mean.
 - Frozen files: `rtl/`, `bench/`, `formal/`, most of `harness/`, `docs/PREREG.md`,
   `docs/prereg.json`, `docs/SPEC.md`, `requirements.txt`, `Makefile`. Editing any of them
