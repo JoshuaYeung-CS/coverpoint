@@ -1,5 +1,7 @@
 # Résumé block: a proposal
 
+> **Adopted 2026-10-16.** This block is live in `resumes/resume-master.tex` as id `coverpoint` (resumes c08f7d1; coverpoint's final sentence 4f7e33b), restyled to the 2026-10-11 two-bullet contract, on the hardware page. The same two bullets head the CV's Research Projects list (resumes fa7ca4a). The proposal below is the record of the wording it was cut from, not the shipping wording.
+
 Nothing in `resumes/` has been touched. This is the block in master syntax, the claims it
 makes with where each is checked, and the wording that was rejected. It would be the first
 block in the pool with a hardware description language, a testbench or a formal proof on
