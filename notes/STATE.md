@@ -1,6 +1,6 @@
 # State
 
-Last updated 2026-09-19. Later rounds run through `/ml-round`.
+Last updated 2026-11-05.
 
 ## Where it stands
 
@@ -24,7 +24,8 @@ produced.
   2026-09-20: exit 0 after 76 minutes on a heavily loaded machine (59 when first scored).
   `make test` has 312 tests.
 
-Local-only repository. No remote, nothing pushed or published, no accounts, no spend.
+Public at github.com/JoshuaYeung-CS/coverpoint since 2026-11-05 (MIT), tag `v1.0-msr2027` = the
+release submitted to the MSR 2027 Data and Tool Showcase.
 Commits are Joshua Yeung's. The résumé block in `docs/RESUME-BLOCK.md` is a proposal;
 `resumes/` has not been touched.
 
