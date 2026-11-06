@@ -214,3 +214,7 @@ Yosys and SymbiYosys (ISC), Verilator (LGPL-3.0 or Artistic-2.0), cocotb (BSD-3-
 pyuvm (Apache-2.0), cocotb-coverage (BSD-2-Clause), z3 (MIT), ABC (UC Berkeley,
 BSD-style). The one-netlist mutation method is that of YosysHQ's MCY (ISC); none of its
 code is used. AMBA APB is an Arm specification; only the public protocol is implemented.
+
+## Licence
+
+MIT (see `LICENSE`).
